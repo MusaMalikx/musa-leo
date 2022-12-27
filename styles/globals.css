@@ -8,3 +8,12 @@
     @apply min-h-screen;
   }
 }
+
+:root {
+  --dark: #121212;
+  --light: #f9f9f9;
+  --border-dark: #dee4e7;
+  --border-light: #37474f;
+  --primary-dark: #f96666;
+  --primary-light: #ff1e1e;
+}

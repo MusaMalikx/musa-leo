@@ -21,7 +21,7 @@ const ThemeIcon = () => {
     if (currentTheme === "dark") {
       return (
         <GiSun
-          className="w-10 h-10 text-yellow-500"
+          className="w-8 sm:w-10 h-8 sm:h-10 text-yellow-500"
           role="button"
           onClick={() => setTheme("light")}
         />
@@ -29,7 +29,7 @@ const ThemeIcon = () => {
     } else {
       return (
         <GiMoon
-          className="w-10 h-10 text-purple-700"
+          className="w-8 sm:w-10 h-8 sm:h-10 text-purple-700"
           role="button"
           onClick={() => setTheme("dark")}
         />
