@@ -6,10 +6,14 @@ import Image from "next/image";
 import user from "../../assets/images/mr.jpg";
 // import screen from "../../utils/screen";
 import { useEffect, useState } from "react";
-import useWindowDimensions from "../../utils/screen";
+// import useWindowDimensions from "../../utils/screen";
+import useWindowSize from "../../utils/screen";
+import HeaderLayout from "../Layout/HeaderLayout";
 
 const About = () => {
-  const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
+  const { width } = useWindowSize();
+
   return (
     <>
       <div className="mt-20">
@@ -19,32 +23,13 @@ const About = () => {
         >
           About
         </p> */}
-        <div className="md:max-w-xl max-w-xs sm:max-w-lg transition-all ease-in-out mx-auto space-y-6">
-          <div
-            data-aos="zoom-in"
-            className="flex flex-row flex-nowrap items-center my-8"
-          >
-            <span
-              className="flex-grow block border-t h-1 dark:border-primary-dark border-primary-light"
-              aria-hidden="true"
-              role="presentation"
-            ></span>
-            <span
-              data-aos="zoom-in"
-              className="flex-none block mx-4 border-2 border-dotted dark:border-primary-light border-primary-dark rounded-md text-xl md:text-4xl px-8 py-3 font-family-dancing-script"
-            >
-              About
-            </span>
-            <span
-              className="flex-grow block border-t h-1 dark:border-primary-dark border-primary-light"
-              aria-hidden="true"
-              role="presentation"
-            ></span>
-          </div>
-        </div>
+        <HeaderLayout text="About Me" />
       </div>
       <div className="flex flex-col md:grid grid-cols-2 justify-center items-center">
-        <div className="relative flex justify-center items-center">
+        <div
+          className="relative flex justify-center items-center"
+          data-aos="fade-right"
+        >
           <div className="z-10">
             <Lottie
               options={{
@@ -76,7 +61,10 @@ const About = () => {
           exit={{ x: -40, opacity: 0 }}
           transition={{ ease: "easeOut", duration: 1 }}
         >
-          <div className="font-family-poppins tracking-wide text-justify lg:text-xl mx-10">
+          <div
+            className=" font-family-montserrat tracking-wide text-justify lg:text-xl mx-10"
+            data-aos="fade-left"
+          >
             Welcome to my personal portfolio web. My name is Musa and I am a
             passionate developer. I am working as a freelancer. I give myself a
             mission to produce creative websites and applications with

@@ -5,10 +5,12 @@ import ThemeIcon from "../components/Theme/ThemeToggleIcon";
 import Navbar from "../components/Navbar/Navbar";
 import Banner from "../components/Banner/Banner";
 import About from "../components/About/About";
+import WhatIDo from "../components/WhatIDo/WhatIDo";
+import WhatIOffer from "../components/WhatIOffer/WhatIOffer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-family-montserrat">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,6 +21,8 @@ const Home = () => {
       <Banner />
       <main className="container mx-auto py-7">
         <About />
+        <WhatIDo />
+        <WhatIOffer />
       </main>
 
       {/* <footer className="flex h-24 w-full items-center justify-center border-t">

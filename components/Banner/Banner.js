@@ -9,10 +9,11 @@ import LeftMotion from "../Layout/Motions/LeftMotion";
 import RightMotion from "../Layout/Motions/RightMotion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import screen from "../../utils/screen";
-import useWindowDimensions from "../../utils/screen";
+// import useWindowDimensions from "../../utils/screen";
+import useWindowSize from "../../utils/screen";
 
 const Banner = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowSize();
 
   const [
     text,

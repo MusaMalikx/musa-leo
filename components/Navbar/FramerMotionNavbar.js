@@ -43,7 +43,7 @@ export const FramerMotionNavbar = () => {
         ref={containerRef}
       >
         <motion.div
-          className="background fixed top-0 left-0 bottom-0 w-[300px] bg-primary-dark h-screen"
+          className="background fixed top-0 left-0 bottom-0 w-[300px] bg-light-border dark:bg-dark-border border-r-2 border-primary-light dark:border-primary-dark h-screen"
           variants={sidebar}
         />
         <Navigation />
@@ -103,7 +103,9 @@ const Path = (props) => (
 );
 
 const MenuToggle = ({ toggle, theme }) => (
-  <button
+  <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
     className="cursor-pointer fixed w-12 h-12 outline-0 border-0 top-[30px] left-[36px] rounded-[50%] flex items-center justify-center"
     onClick={toggle}
   >
@@ -113,10 +115,12 @@ const MenuToggle = ({ toggle, theme }) => (
           closed: { d: "M 2 2.5 L 20 2.5" },
           open: { d: "M 3 16.5 L 17 2.5" },
         }}
-        stroke={theme === "dark" ? "var(--light)" : "var(--dark)"}
-        fill={theme === "dark" ? "var(--light)" : "var(--dark)"}
+        stroke={
+          theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"
+        }
+        fill={theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"}
         fillOpacity="0.5"
-        stroke-opacity="0.8"
+        strokeOpacity="0.8"
       />
       <Path
         d="M 2 9.423 L 20 9.423"
@@ -125,23 +129,27 @@ const MenuToggle = ({ toggle, theme }) => (
           open: { opacity: 0 },
         }}
         transition={{ duration: 0.1 }}
-        stroke={theme === "dark" ? "var(--light)" : "var(--dark)"}
-        fill={theme === "dark" ? "var(--light)" : "var(--dark)"}
+        stroke={
+          theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"
+        }
+        fill={theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"}
         fillOpacity="0.5"
-        stroke-opacity="0.8"
+        strokeOpacity="0.8"
       />
       <Path
         variants={{
           closed: { d: "M 2 16.346 L 20 16.346" },
           open: { d: "M 3 2.5 L 17 16.346" },
         }}
-        stroke={theme === "dark" ? "var(--light)" : "var(--dark)"}
-        fill={theme === "dark" ? "var(--light)" : "var(--dark)"}
+        stroke={
+          theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"
+        }
+        fill={theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"}
         fillOpacity="0.5"
-        stroke-opacity="0.8"
+        strokeOpacity="0.8"
       />
     </svg>
-  </button>
+  </motion.button>
 );
 //-------------
 const variants2 = {
@@ -155,10 +163,27 @@ const variants2 = {
 
 const Navigation = () => (
   <motion.ul className="m-0 p-6 absolute w-56 top-[100px]" variants={variants2}>
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+    {itemIds.map((text ,i) => (
+      <MenuItem i={i} key={i} text={text} />
     ))}
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
+const itemIds = [
+  {
+    text: "About me",
+    id: "#about",
+  },
+  {
+    text: "What I Do",
+    id: "#about",
+  },
+  {
+    text: "About me",
+    id: "#about",
+  },
+  {
+    text: "About me",
+    id: "#about",
+  },
+];
