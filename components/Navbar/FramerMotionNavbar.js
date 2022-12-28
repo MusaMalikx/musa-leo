@@ -27,7 +27,7 @@ const sidebar = {
 };
 
 export const FramerMotionNavbar = () => {
-  const { theme } = useTheme();
+  const { systemTheme, theme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
