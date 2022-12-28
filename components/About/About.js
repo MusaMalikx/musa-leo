@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 // import useWindowDimensions from "../../utils/screen";
 import useWindowSize from "../../utils/screen";
 import HeaderLayout from "../Layout/HeaderLayout";
+import ScrollRightMotion from "../Layout/Motions/ScrollRightMotion";
+import ScrollLeftMotion from "../Layout/Motions/ScrollLeftMotion";
 
 const About = () => {
   // const { width } = useWindowDimensions();
@@ -26,10 +28,7 @@ const About = () => {
         <HeaderLayout text="About Me" />
       </div>
       <div className="flex flex-col md:grid grid-cols-2 justify-center items-center">
-        <div
-          className="relative flex justify-center items-center"
-          data-aos="fade-right"
-        >
+        <ScrollLeftMotion className="relative flex justify-center items-center">
           <div className="z-10">
             <Lottie
               options={{
@@ -54,25 +53,14 @@ const About = () => {
               height={width > 768 ? 300 : 200}
             />
           </div>
-        </div>
-        <motion.div
-          initial={{ x: 40, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -40, opacity: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
-          <div
-            className=" font-family-montserrat tracking-wide text-justify lg:text-xl mx-10"
-            data-aos="fade-left"
-          >
-            Welcome to my personal portfolio web. My name is Musa and I am a
-            passionate developer. I am working as a freelancer. I give myself a
-            mission to produce creative websites and applications with
-            beautifull details. I enrich the design with my own illustrations
-            and designs that are created with precision and based on your
-            desire.
-          </div>
-        </motion.div>
+        </ScrollLeftMotion>
+        <ScrollRightMotion className="font-family-montserrat tracking-wide text-justify lg:text-xl mx-10">
+          Welcome to my personal portfolio web. My name is Musa and I am a
+          passionate developer. I am working as a freelancer. I give myself a
+          mission to produce creative websites and applications with beautifull
+          details. I enrich the design with my own illustrations and designs
+          that are created with precision and based on your desire.
+        </ScrollRightMotion>
       </div>
     </>
   );

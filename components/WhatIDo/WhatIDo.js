@@ -4,24 +4,17 @@ import { motion } from "framer-motion";
 import Lottie from "react-lottie";
 import lottie from "../../assets/animations/119356-development.json";
 import useWindowSize from "../../utils/screen";
+import ScrollRightMotion from "../Layout/Motions/ScrollRightMotion";
+import ScrollLeftMotion from "../Layout/Motions/ScrollLeftMotion";
 
 const WhatIDo = () => {
   const { width } = useWindowSize();
   return (
     <div className="mt-20">
       <HeaderLayout text="What I Do" />
-      <div className="flex flex-col md:grid grid-cols-2 justify-center items-center mt-24">
-        <motion.div
-          initial={{ x: 40, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -40, opacity: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-          className="space-y-4"
-        >
-          <div
-            className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2"
-            data-aos="fade-right"
-          >
+      <div className="flex flex-col-reverse md:grid grid-cols-2 justify-center items-center mt-24">
+        <div className="space-y-4 sm:space-y-0 md:space-y-4 sm:grid grid-cols-2 gap-4 justify-center block md:block">
+          <ScrollLeftMotion className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2">
             <span className="text-primary-dark">&gt;</span>
             <div className="space-y-1">
               <strong className="uppercase font-family-montserrat">
@@ -33,11 +26,8 @@ const WhatIDo = () => {
                 connection between inspiration and my ideas and imagination.
               </p>
             </div>
-          </div>
-          <div
-            className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2"
-            data-aos="fade-right"
-          >
+          </ScrollLeftMotion>
+          <ScrollLeftMotion className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2">
             <span className="text-primary-dark">&gt;</span>
             <div className="space-y-1">
               <strong className="uppercase font-family-montserrat">
@@ -50,11 +40,8 @@ const WhatIDo = () => {
                 purpose is REACT.
               </p>
             </div>
-          </div>
-          <div
-            className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2"
-            data-aos="fade-right"
-          >
+          </ScrollLeftMotion>
+          <ScrollLeftMotion className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2">
             <span className="text-primary-dark">&gt;</span>
             <div className="space-y-1">
               <strong className="uppercase font-family-montserrat">
@@ -68,11 +55,8 @@ const WhatIDo = () => {
                 content of the application.
               </p>
             </div>
-          </div>
-          <div
-            className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2"
-            data-aos="fade-right"
-          >
+          </ScrollLeftMotion>
+          <ScrollLeftMotion className="font-family-poppins tracking-wide text-justify mx-10 flex space-x-2">
             <span className="text-primary-dark">&gt;</span>
             <div className="space-y-1">
               <strong className="uppercase font-family-montserrat">
@@ -87,12 +71,9 @@ const WhatIDo = () => {
                 functional skills.
               </p>
             </div>
-          </div>
-        </motion.div>
-        <div
-          className="flex justify-center items-center my-5"
-          data-aos="fade-left"
-        >
+          </ScrollLeftMotion>
+        </div>
+        <ScrollRightMotion className="flex justify-center items-center my-5">
           <Lottie
             options={{
               loop: true,
@@ -107,7 +88,7 @@ const WhatIDo = () => {
             height={width > 768 ? 400 : 300}
             width={width > 768 ? 400 : 300}
           />
-        </div>
+        </ScrollRightMotion>
       </div>
     </div>
   );

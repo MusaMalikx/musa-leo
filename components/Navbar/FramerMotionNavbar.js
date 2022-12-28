@@ -73,7 +73,7 @@ const variants = {
 
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
-const MenuItem = ({ i }) => {
+const MenuItem = ({ i, text }) => {
   const style = { border: `2px solid ${colors[i]}` };
   return (
     <motion.li
@@ -82,11 +82,10 @@ const MenuItem = ({ i }) => {
       whileTap={{ scale: 0.95 }}
       className="m-0 p-0 mb-5 flex items-center cursor-pointer"
     >
-      <div
-        className="icon-placeholder w-10 h-10 mr-5 rounded-[50%] flex-[40px 0]"
-        style={style}
-      />
-      <div className="text-placeholder rounded w-48 h-5 flex-1" style={style} />
+      <div className="icon-placeholder w-10 h-10 mr-5 rounded-[50%] flex-[40px 0] border-2 dark:border-primary-dark border-primary-light" />
+      <div className="text-placeholder rounded text-center flex-1 border-2 dark:border-primary-dark border-primary-light">
+        {text.text}
+      </div>
     </motion.li>
   );
 };
@@ -163,7 +162,7 @@ const variants2 = {
 
 const Navigation = () => (
   <motion.ul className="m-0 p-6 absolute w-56 top-[100px]" variants={variants2}>
-    {itemIds.map((text ,i) => (
+    {itemIds.map((text, i) => (
       <MenuItem i={i} key={i} text={text} />
     ))}
   </motion.ul>
