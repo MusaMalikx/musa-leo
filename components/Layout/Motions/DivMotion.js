@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const DivMotion = ({ children, onMouseEnter, onMouseLeave, className }) => {
   return (
@@ -6,7 +6,7 @@ const DivMotion = ({ children, onMouseEnter, onMouseLeave, className }) => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 20, opacity: 0 }}
-      transition={{ ease: "easeOut", duration: 0.5 }}
+      transition={{ ease: 'easeOut', duration: 0.5 }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       className={className}

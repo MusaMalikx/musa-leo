@@ -1,8 +1,8 @@
-import ThemeIcon from "../Theme/ThemeToggleIcon";
-import { motion, useScroll, useSpring } from "framer-motion";
-import DivMotion from "../Layout/Motions/DivMotion";
-import { FramerMotionNavbar } from "./FramerMotionNavbar";
-import { useState } from "react";
+import ThemeIcon from '../Theme/ThemeToggleIcon';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import DivMotion from '../Layout/Motions/DivMotion';
+import { FramerMotionNavbar } from './FramerMotionNavbar';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [name, setName] = useState(true);
@@ -20,35 +20,27 @@ const Navbar = () => {
         className="progress-bar absolute top-[98px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
         style={{ scaleX }}
       />
-      <div className="flex items-center justify-between py-7 pl-5 sm:pl-10 ">
-        <div className="flex items-center space-x-2 relative pl-14">
+      <div className="flex items-center justify-between py-7 ">
+        <div className="relative">
           <FramerMotionNavbar />
+          <div className="w-20" />
+        </div>
+        <div className="flex">
+          {/* <FramerMotionNavbar />
+          <div /> */}
           <p className="text-3xl mt-1.5">&lt; </p>
           <div className="text-4xl font-thin font-family-noto-serif-sc tracking-widest cursor-none">
             {name && (
               <DivMotion onMouseEnter={toggleName}>
-                <strong className="text-primary-light dark:text-primary-dark">
-                  穆
-                </strong>
-                萨
-                <strong className="text-primary-light dark:text-primary-dark">
-                  马
-                </strong>
+                <strong className="text-primary-light dark:text-primary-dark">穆</strong>萨
+                <strong className="text-primary-light dark:text-primary-dark">马</strong>
                 利克
               </DivMotion>
             )}
             {!name && (
-              <DivMotion
-                className=" font-family-montserrat"
-                onMouseLeave={toggleName}
-              >
-                <strong className="text-primary-light dark:text-primary-dark">
-                  M
-                </strong>
-                usa{" "}
-                <strong className="text-primary-light dark:text-primary-dark">
-                  M
-                </strong>
+              <DivMotion className=" font-family-montserrat" onMouseLeave={toggleName}>
+                <strong className="text-primary-light dark:text-primary-dark">M</strong>
+                usa <strong className="text-primary-light dark:text-primary-dark">M</strong>
                 alik
               </DivMotion>
             )}

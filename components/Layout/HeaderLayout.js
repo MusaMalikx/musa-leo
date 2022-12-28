@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const HeaderLayout = ({ text }) => {
   return (
@@ -7,7 +7,7 @@ const HeaderLayout = ({ text }) => {
       initial={{ y: 40, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       // animate={{ y: -40, opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 0.8 }}
+      transition={{ ease: 'easeOut', duration: 0.8 }}
       // exit={{ y: 20, opacity: 0 }}
     >
       <div className="md:max-w-xl max-w-xs sm:max-w-lg transition-all ease-in-out mx-auto space-y-6">

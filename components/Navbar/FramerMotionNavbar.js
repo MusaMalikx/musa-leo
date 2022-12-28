@@ -1,25 +1,21 @@
-import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
-import { useDimensions } from "../../utils/useDimensions";
-import { useTheme } from "next-themes";
-// import { useDimensions } from "./use-dimensions";
-// import { MenuToggle } from "./MenuToggle";
-// import { Navigation } from "./Navigation";
+import { useRef } from 'react';
+import { motion, useCycle } from 'framer-motion';
+import { useDimensions } from '../../utils/useDimensions';
 
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 20,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: "circle(0px at 60px 53px)",
+    clipPath: 'circle(0px at 60px 53px)',
     transition: {
       delay: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
       damping: 40,
     },
@@ -27,8 +23,6 @@ const sidebar = {
 };
 
 export const FramerMotionNavbar = () => {
-  const { systemTheme, theme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -39,7 +33,7 @@ export const FramerMotionNavbar = () => {
       <motion.nav
         className="absolute top-0 left-0 bottom-0 w-[300px] z-50"
         initial={false}
-        animate={isOpen ? "open" : "closed"}
+        animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
       >
@@ -48,7 +42,7 @@ export const FramerMotionNavbar = () => {
           variants={sidebar}
         />
         <Navigation />
-        <MenuToggle toggle={() => toggleOpen()} theme={currentTheme} />
+        <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
     </>
   );
@@ -72,10 +66,9 @@ const variants = {
   },
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+// const colors = ['#FF008C', '#D309E1', '#9C1AFF', '#7700FF', '#4400FF'];
 
-const MenuItem = ({ i, text }) => {
-  const style = { border: `2px solid ${colors[i]}` };
+const MenuItem = ({ text }) => {
   return (
     <motion.li
       variants={variants}
@@ -96,13 +89,13 @@ const Path = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    stroke="var(--primary-dark)"
     strokeLinecap="round"
     {...props}
   />
 );
 
-const MenuToggle = ({ toggle, theme }) => (
+const MenuToggle = ({ toggle }) => (
   <motion.button
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
@@ -112,15 +105,9 @@ const MenuToggle = ({ toggle, theme }) => (
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" },
+          closed: { d: 'M 2 2.5 L 20 2.5' },
+          open: { d: 'M 3 16.5 L 17 2.5' },
         }}
-        stroke={
-          theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"
-        }
-        fill={theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"}
-        fillOpacity="0.5"
-        strokeOpacity="0.8"
       />
       <Path
         d="M 2 9.423 L 20 9.423"
@@ -129,24 +116,12 @@ const MenuToggle = ({ toggle, theme }) => (
           open: { opacity: 0 },
         }}
         transition={{ duration: 0.1 }}
-        stroke={
-          theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"
-        }
-        fill={theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"}
-        fillOpacity="0.5"
-        strokeOpacity="0.8"
       />
       <Path
         variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" },
+          closed: { d: 'M 2 16.346 L 20 16.346' },
+          open: { d: 'M 3 2.5 L 17 16.346' },
         }}
-        stroke={
-          theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"
-        }
-        fill={theme === "dark" ? "var(--primary-dark)" : "var(--primary-light)"}
-        fillOpacity="0.5"
-        strokeOpacity="0.8"
       />
     </svg>
   </motion.button>
@@ -171,19 +146,19 @@ const Navigation = () => (
 
 const itemIds = [
   {
-    text: "About me",
-    id: "#about",
+    text: 'About me',
+    id: '#about',
   },
   {
-    text: "What I Do",
-    id: "#about",
+    text: 'What I Do',
+    id: '#about',
   },
   {
-    text: "About me",
-    id: "#about",
+    text: 'About me',
+    id: '#about',
   },
   {
-    text: "About me",
-    id: "#about",
+    text: 'About me',
+    id: '#about',
   },
 ];

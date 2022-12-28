@@ -1,12 +1,11 @@
-import Lottie from "react-lottie";
-import lottie1 from "../../assets/animations/16771-heading-rectangle.json";
-import lottie2 from "../../assets/animations/46147-background2.json";
-import Image from "next/image";
-import user from "../../assets/images/mr.jpg";
-import useWindowSize from "../../utils/screen";
-import HeaderLayout from "../Layout/HeaderLayout";
-import ScrollRightMotion from "../Layout/Motions/ScrollRightMotion";
-import ScrollLeftMotion from "../Layout/Motions/ScrollLeftMotion";
+import Lottie from 'react-lottie';
+import lottie2 from '../../assets/animations/46147-background2.json';
+import Image from 'next/image';
+import user from '../../assets/images/mr.jpg';
+import useWindowSize from '../../utils/screen';
+import HeaderLayout from '../Layout/HeaderLayout';
+import ScrollRightMotion from '../Layout/Motions/ScrollRightMotion';
+import ScrollLeftMotion from '../Layout/Motions/ScrollLeftMotion';
 
 const About = () => {
   const { width } = useWindowSize();
@@ -25,7 +24,7 @@ const About = () => {
                 autoplay: true,
                 animationData: lottie2,
                 rendererSettings: {
-                  preserveAspectRatio: "xMidYMid slice",
+                  preserveAspectRatio: 'xMidYMid slice',
                 },
               }}
               isClickToPauseDisabled
@@ -37,17 +36,17 @@ const About = () => {
             <Image
               className="rounded-full"
               src={user}
+              alt="profile"
               width={width > 768 ? 300 : 200}
               height={width > 768 ? 300 : 200}
             />
           </div>
         </ScrollLeftMotion>
         <ScrollRightMotion className="font-family-montserrat tracking-wide text-justify lg:text-xl mx-10">
-          Welcome to my personal portfolio web. My name is Musa and I am a
-          passionate developer. I am working as a freelancer. I give myself a
-          mission to produce creative websites and applications with beautifull
-          details. I enrich the design with my own illustrations and designs
-          that are created with precision and based on your desire.
+          Welcome to my personal portfolio web. My name is Musa and I am a passionate developer. I
+          am working as a freelancer. I give myself a mission to produce creative websites and
+          applications with beautifull details. I enrich the design with my own illustrations and
+          designs that are created with precision and based on your desire.
         </ScrollRightMotion>
       </div>
     </>
