@@ -4,6 +4,7 @@ import Banner from '../components/Banner/Banner';
 import About from '../components/About/About';
 import WhatIDo from '../components/WhatIDo/WhatIDo';
 import WhatIOffer from '../components/WhatIOffer/WhatIOffer';
+import Skills from '../components/Skills/Skills';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <About />
         <WhatIDo />
         <WhatIOffer />
+        <Skills />
       </main>
 
       {/* <footer className="flex h-24 w-full items-center justify-center border-t">
