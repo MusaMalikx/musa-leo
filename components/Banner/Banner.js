@@ -40,67 +40,10 @@ const Banner = () => {
           },
         }}
         isClickToPauseDisabled
-        speed={0.8}
+        // speed={0.8}
         height={600}
         width={600}
       />
-      {/* <div>
-        <Lottie
-          options={{
-            loop: true,
-            autoplay: true,
-            animationData: lottie2,
-            rendererSettings: {
-              preserveAspectRatio: "xMidYMid slice",
-            },
-          }}
-          speed={0.5}
-          height={400}
-          width={400}
-        />
-        <motion.div
-          initial={{ x: -40, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: 40, opacity: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-        >
-          <div className=" font-family-poppins tracking-wide text-justify">
-            Welcome to my personal portfolio web. My name is Musa and I am a
-            passionate developer. I am working as a freelancer. I give myself a
-            mission to produce creative websites and applications with
-            beautifull details. I enrich the design with my own illustrations
-            and designs that are created with precision and based on your
-            desire.
-          </div>
-        </motion.div>
-      </div> */}
-      {/* <div className="relative">
-        <Lottie
-          options={{
-            loop: true,
-            autoplay: true,
-            animationData: lottie3,
-            rendererSettings: {
-              preserveAspectRatio: "xMidYMid slice",
-            },
-          }}
-          speed={0.5}
-          height={500}
-          width={500}
-        />
-        <p className="uppercase tracking-wider text-lg md:text-3xl text-center font-family-montserrat font-semibold px-6 space-x-4 absolute top-[50%]">
-          <span className="text-primary-light dark:text-primary-dark">
-            &lt;
-          </span>
-          <span>{text}</span>
-          <span className="text-primary-light">
-            <Cursor />
-          </span>
-          <span className="text-primary-light dark:text-primary-dark">
-            /&gt;
-          </span>
-        </p>
-      </div> */}
       <motion.div
         initial={{ x: 40, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -121,7 +64,7 @@ const Banner = () => {
                 },
               }}
               isClickToPauseDisabled
-              speed={0.8}
+              // speed={0.8}
               height={width > 768 ? 500 : 400}
               width={width > 768 ? 500 : 400}
             />
