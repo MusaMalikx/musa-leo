@@ -84,7 +84,6 @@ const WhatIDo = () => {
               },
             }}
             isClickToPauseDisabled
-            speed={0.8}
             height={width > 768 ? 400 : 300}
             width={width > 768 ? 400 : 300}
           />

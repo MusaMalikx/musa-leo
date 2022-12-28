@@ -1,15 +1,9 @@
 import React from "react";
 import Lottie from "react-lottie";
 import lottie1 from "../../assets/animations/63487-programming-computer.json";
-import lottie2 from "../../assets/animations/74499-circle.json";
-import lottie3 from "../../assets/animations/86594-dots-red.json";
 import lottie4 from "../../assets/animations/53345-red-circle.json";
 import { motion } from "framer-motion";
-import LeftMotion from "../Layout/Motions/LeftMotion";
-import RightMotion from "../Layout/Motions/RightMotion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import screen from "../../utils/screen";
-// import useWindowDimensions from "../../utils/screen";
 import useWindowSize from "../../utils/screen";
 
 const Banner = () => {
@@ -17,7 +11,6 @@ const Banner = () => {
 
   const [
     text,
-    //, helper
   ] = useTypewriter({
     words: [
       "Hi, The Name's Musa Malik",
@@ -40,7 +33,6 @@ const Banner = () => {
           },
         }}
         isClickToPauseDisabled
-        // speed={0.8}
         height={600}
         width={600}
       />
@@ -51,7 +43,6 @@ const Banner = () => {
         transition={{ ease: "easeOut", duration: 0.5 }}
         className="absolute "
       >
-        {/* md:left-[5%] lg:left-[24%] top-[5%] */}
         <div className="flex flex-col flex-grow text-nowwrap">
           <div className="">
             <Lottie
@@ -64,26 +55,10 @@ const Banner = () => {
                 },
               }}
               isClickToPauseDisabled
-              // speed={0.8}
               height={width > 768 ? 500 : 400}
               width={width > 768 ? 500 : 400}
             />
           </div>
-          {/* <div className="md:hidden">
-            <Lottie
-              options={{
-                loop: true,
-                autoplay: true,
-                animationData: lottie1,
-                rendererSettings: {
-                  preserveAspectRatio: "xMidYMid slice",
-                },
-              }}
-              speed={0.5}
-              height={400}
-              width={400}
-            />
-          </div> */}
           <p className="text-center font-thin text-xs md:text-base mb-2 font-family-montserrat uppercase">
             ( Developer / Designer / Artist )
           </p>

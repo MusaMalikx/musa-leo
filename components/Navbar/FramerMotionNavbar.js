@@ -28,6 +28,7 @@ const sidebar = {
 
 export const FramerMotionNavbar = () => {
   const { theme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -47,7 +48,7 @@ export const FramerMotionNavbar = () => {
           variants={sidebar}
         />
         <Navigation />
-        <MenuToggle toggle={() => toggleOpen()} theme={theme} />
+        <MenuToggle toggle={() => toggleOpen()} theme={currentTheme} />
       </motion.nav>
     </>
   );

@@ -1,12 +1,8 @@
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import React, { useState } from "react";
 import ThemeIcon from "../Theme/ThemeToggleIcon";
-import GreaterImg from "../../assets/images/greater-than-sign-icon.ico";
-import LesserImg from "../../assets/images/less-than-sign-icon.ico";
 import { motion, useScroll, useSpring } from "framer-motion";
 import DivMotion from "../Layout/Motions/DivMotion";
 import { FramerMotionNavbar } from "./FramerMotionNavbar";
+import { useState } from "react";
 
 const Navbar = () => {
   const [name, setName] = useState(true);
@@ -26,9 +22,7 @@ const Navbar = () => {
       />
       <div className="flex items-center justify-between py-7 pl-5 sm:pl-10 ">
         <div className="flex items-center space-x-2 relative pl-14">
-          {/* <Image src={LesserImg} /> */}
           <FramerMotionNavbar />
-          {/* <FramerMotionNavbarBg /> */}
           <p className="text-3xl mt-1.5">&lt; </p>
           <div className="text-4xl font-thin font-family-noto-serif-sc tracking-widest cursor-none">
             {name && (
@@ -60,22 +54,13 @@ const Navbar = () => {
             )}
           </div>
           <p className="text-3xl mt-1.5"> &gt; </p>
-          {/* <Image src={GreaterImg} /> */}
-          {/* <span>{" />"}</span> */}
         </div>
         <DivMotion className="flex">
           <div className="mr-8">
             <ThemeIcon />
           </div>
-          {/* <Hamburger /> */}
         </DivMotion>
       </div>
-      {/* <div className="">
-          <motion.div
-            className="progress-bar absolute z-10 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg origin-left"
-            style={{ scaleX: scrollYProgress }}
-          />
-        </div> */}
     </div>
   );
 };

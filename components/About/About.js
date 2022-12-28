@@ -1,30 +1,19 @@
 import Lottie from "react-lottie";
 import lottie1 from "../../assets/animations/16771-heading-rectangle.json";
 import lottie2 from "../../assets/animations/46147-background2.json";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import user from "../../assets/images/mr.jpg";
-// import screen from "../../utils/screen";
-import { useEffect, useState } from "react";
-// import useWindowDimensions from "../../utils/screen";
 import useWindowSize from "../../utils/screen";
 import HeaderLayout from "../Layout/HeaderLayout";
 import ScrollRightMotion from "../Layout/Motions/ScrollRightMotion";
 import ScrollLeftMotion from "../Layout/Motions/ScrollLeftMotion";
 
 const About = () => {
-  // const { width } = useWindowDimensions();
   const { width } = useWindowSize();
 
   return (
     <>
       <div className="mt-20">
-        {/* <p
-          data-aos="zoom-in"
-          className="border-2 border-dotted border-primary-dark rounded-md text-4xl px-8 py-3 font-family-dancing-script"
-        >
-          About
-        </p> */}
         <HeaderLayout text="About Me" />
       </div>
       <div className="flex flex-col md:grid grid-cols-2 justify-center items-center">
@@ -40,7 +29,6 @@ const About = () => {
                 },
               }}
               isClickToPauseDisabled
-              speed={0.8}
               height={width > 768 ? 600 : 400}
               width={width > 768 ? 600 : 400}
             />
