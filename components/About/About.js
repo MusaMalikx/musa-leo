@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import useWindowDimensions from "../../utils/screen";
 
 const About = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <>
       <div className="mt-20">
@@ -36,7 +36,7 @@ const About = () => {
               About
             </span>
             <span
-              class="flex-grow block border-t h-1 dark:border-primary-dark border-primary-light"
+              className="flex-grow block border-t h-1 dark:border-primary-dark border-primary-light"
               aria-hidden="true"
               role="presentation"
             ></span>
@@ -55,7 +55,8 @@ const About = () => {
                   preserveAspectRatio: "xMidYMid slice",
                 },
               }}
-              speed={0.5}
+              isClickToPauseDisabled
+              speed={0.8}
               height={width > 768 ? 600 : 400}
               width={width > 768 ? 600 : 400}
             />

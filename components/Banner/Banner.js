@@ -12,7 +12,6 @@ import screen from "../../utils/screen";
 import useWindowDimensions from "../../utils/screen";
 
 const Banner = () => {
-
   const { height, width } = useWindowDimensions();
 
   const [
@@ -39,7 +38,8 @@ const Banner = () => {
             preserveAspectRatio: "xMidYMid slice",
           },
         }}
-        speed={0.5}
+        isClickToPauseDisabled
+        speed={0.8}
         height={600}
         width={600}
       />
@@ -104,7 +104,7 @@ const Banner = () => {
         initial={{ x: 40, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -40, opacity: 0 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        transition={{ ease: "easeOut", duration: 0.5 }}
         className="absolute "
       >
         {/* md:left-[5%] lg:left-[24%] top-[5%] */}
@@ -119,7 +119,8 @@ const Banner = () => {
                   preserveAspectRatio: "xMidYMid slice",
                 },
               }}
-              speed={0.5}
+              isClickToPauseDisabled
+              speed={0.8}
               height={width > 768 ? 500 : 400}
               width={width > 768 ? 500 : 400}
             />

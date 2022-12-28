@@ -5,6 +5,7 @@ import "react-hamburger-menus/dist/style.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ProSidebarProvider } from "react-pro-sidebar";
 // import "bower_components/aos/dist/aos.css";
 // import "bower_components/aos/dist/aos.js";
 
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence mode="wait" initial={true}>
       <ThemeProvider enableSystem={true} attribute="class">
-        <Component {...pageProps} />
+        <ProSidebarProvider>
+          <Component {...pageProps} />
+        </ProSidebarProvider>
       </ThemeProvider>
     </AnimatePresence>
   );
