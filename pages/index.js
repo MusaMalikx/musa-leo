@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import ThemeIcon from "../components/Theme/ThemeToggleIcon";
-import { GhostNavbar } from "react-hamburger-menus";
 import Navbar from "../components/Navbar/Navbar";
 import Banner from "../components/Banner/Banner";
 import About from "../components/About/About";
