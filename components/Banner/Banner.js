@@ -16,25 +16,27 @@ const Banner = () => {
 
   return (
     <div className="flex items-center justify-center relative">
-      <Lottie
-        options={{
-          loop: true,
-          autoplay: true,
-          animationData: lottie4,
-          rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice',
-          },
-        }}
-        isClickToPauseDisabled
-        height={600}
-        width={600}
-      />
+      <div className="hidden md:block">
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: lottie4,
+            rendererSettings: {
+              preserveAspectRatio: 'xMidYMid slice',
+            },
+          }}
+          isClickToPauseDisabled
+          height={600}
+          width={600}
+        />
+      </div>
       <motion.div
         initial={{ x: 40, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -40, opacity: 0 }}
         transition={{ ease: 'easeOut', duration: 0.5 }}
-        className="absolute "
+        className="md:absolute "
       >
         <div className="flex flex-col flex-grow text-nowwrap">
           <div className="">
@@ -55,7 +57,7 @@ const Banner = () => {
           <p className="text-center font-thin text-xs md:text-base mb-2 font-family-montserrat uppercase">
             ( Developer / Designer / Artist )
           </p>
-          <p className="uppercase tracking-wider text-base sm:text-lg md:text-3xl text-center font-family-montserrat font-semibold px-6 space-x-3">
+          <p className="uppercase tracking-wider text-lg sm:text-xl md:text-3xl text-center font-family-montserrat font-semibold px-6 space-x-3">
             <span className="text-primary-light dark:text-primary-dark">&lt;</span>
             <span>{text}</span>
             <span className="text-primary-light">

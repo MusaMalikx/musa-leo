@@ -99,7 +99,7 @@ const MenuToggle = ({ toggle }) => (
   <motion.button
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
-    className="cursor-pointer fixed w-12 h-12 outline-0 border-0 top-[30px] left-[36px] rounded-[50%] flex items-center justify-center"
+    className="cursor-pointer fixed w-12 h-12 outline-0 border-0 top-[25px] sm:top-[30px] left-[36px] rounded-[50%] flex items-center justify-center"
     onClick={toggle}
   >
     <svg width="23" height="23" viewBox="0 0 23 23">

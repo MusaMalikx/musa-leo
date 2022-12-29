@@ -25,11 +25,9 @@ const Navbar = () => {
           <FramerMotionNavbar />
           <div className="w-20" />
         </div>
-        <div className="flex">
-          {/* <FramerMotionNavbar />
-          <div /> */}
-          <p className="text-3xl mt-1.5">&lt; </p>
-          <div className="text-4xl font-thin font-family-noto-serif-sc tracking-widest cursor-none">
+        <div className="flex space-x-1">
+          <p className="text-xl sm:text-3xl mt-1 sm:mt-1.5">&lt; </p>
+          <div className="text-2xl sm:text-4xl font-thin font-family-noto-serif-sc tracking-widest cursor-none">
             {name && (
               <DivMotion onMouseEnter={toggleName}>
                 <strong className="text-primary-light dark:text-primary-dark">穆</strong>萨
@@ -45,7 +43,7 @@ const Navbar = () => {
               </DivMotion>
             )}
           </div>
-          <p className="text-3xl mt-1.5"> &gt; </p>
+          <p className="text-xl sm:text-3xl mt-1 sm:mt-1.5"> &gt; </p>
         </div>
         <DivMotion className="flex">
           <div className="mr-8">

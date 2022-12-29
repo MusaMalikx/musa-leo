@@ -14,7 +14,7 @@ const WhatIOffer = () => {
   return (
     <div className="mt-20">
       <HeaderLayout text="What I Offer" />
-      <div className="flex flex-col md:flex-row items-center justify-between md:max-w-3xl mx-auto mt-20 space-y-5 md:space-y-0">
+      <div className="flex flex-col md:flex-row items-center justify-between md:max-w-3xl mx-auto mt-20 space-y-8 md:space-y-0">
         <ScrollLeftMotion className="flex flex-col items-center md:items-start">
           <AiOutlineAntDesign
             className="mb-6 text-primary-light dark:text-primary-dark"
@@ -43,7 +43,7 @@ const WhatIOffer = () => {
         height={width > 768 ? 400 : 300}
         width={width > 768 ? 400 : 300}
       />
-      <div className="flex flex-col md:flex-row items-center justify-between md:max-w-3xl mx-auto space-y-5 md:space-y-0">
+      <div className="flex flex-col md:flex-row items-center justify-between md:max-w-3xl mx-auto space-y-8 md:space-y-0">
         <ScrollLeftMotion className="flex flex-col items-center md:items-start">
           <CgIfDesign
             className="mb-6 text-primary-light dark:text-primary-dark"
