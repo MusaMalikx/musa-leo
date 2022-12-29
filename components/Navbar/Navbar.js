@@ -15,7 +15,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="sticky top-0 backdrop-blur-md shadow-md bg-light/40 dark:bg-dark/40 z-10">
+    <div className="fixed top-0 w-full backdrop-blur-md shadow-md bg-light/40 dark:bg-dark/40 z-10">
       <motion.div
         className="progress-bar absolute top-[88px] sm:top-[98px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
         style={{ scaleX }}

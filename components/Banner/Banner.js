@@ -57,7 +57,7 @@ const Banner = () => {
           <p className="text-center font-thin text-xs md:text-base mb-2 font-family-montserrat uppercase">
             ( Developer / Designer / Artist )
           </p>
-          <p className="uppercase tracking-wider text-lg sm:text-xl md:text-3xl text-center font-family-montserrat font-semibold px-6 space-x-3">
+          <p className="uppercase tracking-wider text-lg sm:text-xl md:text-3xl text-center font-semibold px-6 space-x-3">
             <span className="text-primary-light dark:text-primary-dark">&lt;</span>
             <span>{text}</span>
             <span className="text-primary-light">

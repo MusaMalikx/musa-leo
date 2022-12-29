@@ -9,6 +9,10 @@
   }
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 :root {
   --dark: #121212;
   --light: #f9f9f9;

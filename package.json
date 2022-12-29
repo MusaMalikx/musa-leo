@@ -29,7 +29,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-lottie": "^1.2.3",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "scroller-motion": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
