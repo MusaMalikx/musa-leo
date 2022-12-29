@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import Banner from '../components/Banner/Banner';
 import About from '../components/About/About';
@@ -9,12 +8,6 @@ import Skills from '../components/Skills/Skills';
 const Home = () => {
   return (
     <div className="min-h-screen font-family-montserrat">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&family=Noto+Serif+SC&family=Poppins&display=swap" />
-      </Head>
-
       <Navbar />
       <Banner />
       <main className="container mx-auto py-7">

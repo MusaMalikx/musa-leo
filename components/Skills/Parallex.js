@@ -10,7 +10,7 @@ import {
 } from 'framer-motion';
 import { wrap } from '@motionone/utils';
 
-const ParallaxText = ({ children, baseVelocity = 10 }) => {
+const Parallax = ({ children, baseVelocity = 10 }) => {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -58,16 +58,16 @@ const ParallaxText = ({ children, baseVelocity = 10 }) => {
   return (
     <div className="parallax overflow-hidden tracking-[0.8] m-0 whitespace-nowrap flex flex-nowrap">
       <motion.div
-        className="scroller font-semibold uppercase text-6xl flex whitespace-nowrap flex-nowrap"
+        className="scroller font-family-plaster text-3xl md:text-6xl flex whitespace-nowrap flex-nowrap"
         style={{ x }}
       >
-        <span className="block mr-8">{children} </span>
-        <span className="block mr-8">{children} </span>
-        <span className="block mr-8">{children} </span>
-        <span className="block mr-8">{children} </span>
+        <div className="block mr-8">{children} </div>
+        <div className="block mr-8">{children} </div>
+        <div className="block mr-8">{children} </div>
+        <div className="block mr-8">{children} </div>
       </motion.div>
     </div>
   );
 };
 
-export default ParallaxText;
+export default Parallax;

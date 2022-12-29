@@ -43,10 +43,18 @@ const About = () => {
           </div>
         </ScrollLeftMotion>
         <ScrollRightMotion className="font-family-montserrat tracking-wide text-justify lg:text-xl mx-10">
-          Welcome to my personal portfolio web. My name is Musa and I am a passionate developer. I
-          am working as a freelancer. I give myself a mission to produce creative websites and
-          applications with beautifull details. I enrich the design with my own illustrations and
-          designs that are created with precision and based on your desire.
+          <div>
+            Welcome to my personal portfolio web. My name is Musa and I am a passionate developer. I
+            am working as a freelancer. I give myself a mission to produce creative websites and
+            applications with beautifull details. I enrich the design with my own illustrations and
+            designs that are created with precision and based on your desire.
+          </div>
+          <button className="group relative h-12 w-52 mt-10 focus:ring-2 focus:ring-primary-light/50 dark:focus:ring-primary-dark/50 ring-offset-2 ring-offset-light dark:ring-offset-dark overflow-hidden rounded-lg dark:bg-dark-border bg-light-border text-lg shadow hover:shadow-dark dark:hover:shadow-light">
+            <div className="absolute inset-0 w-3 bg-primary-light dark:bg-primary-dark transition-all duration-[500ms] ease-out group-hover:w-full"></div>
+            <span className="relative dark:text-light text-dark dark:group-hover:text-dark group-hover:text-light">
+              See my Portfolio
+            </span>
+          </button>
         </ScrollRightMotion>
       </div>
     </>

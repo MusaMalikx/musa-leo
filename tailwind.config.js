@@ -22,6 +22,7 @@ module.exports = {
         'family-montserrat': 'Montserrat',
         'family-dancing-script': 'Dancing Script',
         'family-noto-serif-sc': 'Noto Serif SC',
+        'family-plaster': 'Plaster',
       },
     },
   },
