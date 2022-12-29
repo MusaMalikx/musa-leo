@@ -28,7 +28,7 @@ const Skills = () => {
     <div className="my-20">
       <HeaderLayout text="Skills" />
       <motion.div
-        initial={{ y: -40, opacity: 0, scale: 1.5 }}
+        initial={{ y: -40, opacity: 0, scale: 0.5 }}
         whileInView={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ ease: 'easeOut', duration: 0.8 }}
         className="relative pt-20 space-y-10 md:mt-10"

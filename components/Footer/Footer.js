@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="max-w-lg bg-light-border dark:bg-dark-border px-4 pt-24 py-8 mx-auto text-left md:max-w-none md:text-center">
           <h1 className="text-3xl font-extrabold leading-10 tracking-tight text-dark dark:text-light text-center sm:leading-none md:text-7xl">
             <span className="inline md:block">Join Me On</span>
-            <div className="flex justify-center items-center text-5xl mt-5 mb-10 space-x-5">
+            <div className="flex justify-center items-center text-[40px] sm:text-5xl mt-5 mb-10 space-x-5">
               <SiGithub className="border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
               <SiFacebook className="border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
               <SiInstagram className="border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
