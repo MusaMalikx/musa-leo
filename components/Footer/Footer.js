@@ -1,4 +1,11 @@
-import { SiGithub, SiLinkedin, SiInstagram, SiFacebook, SiSnapchat } from 'react-icons/si';
+import {
+  SiGithub,
+  SiLinkedin,
+  SiInstagram,
+  SiFacebook,
+  SiSnapchat,
+  //   SiVercel,
+} from 'react-icons/si';
 import { AiTwotoneMail } from 'react-icons/ai';
 import Image from 'next/image';
 import Avatar from '../../assets/images/av.jpg';
@@ -38,12 +45,25 @@ const Footer = () => {
             <p className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400 lg:text-right lg:mt-0">
               Crafted with ❤️ by{' '}
               <span className="font-family-poppins text-primary-light dark:text-primary-dark tracking-wider font-extrabold">
-                Mr Malik
+                Mr Malik ~ musamalik
               </span>
             </p>
           </div>
         </div>
       </footer>
+      <div className="bg-light dark:bg-dark dark:text-gray-300 text-gray-600 text-center py-2 uppercase flex items-center justify-center space-x-2 tracking-widest">
+        <span className="text-xl">©</span>{' '}
+        <p className="text-xs md:text-sm flex items-center space-x-2">
+          <span>All rights reserved</span> <span className="font-family-dancing-script">2022</span>
+        </p>
+        {/* <p className="text-xs md:text-sm flex items-center">
+          Powered by{' '}
+          <span className="mx-2">
+            <SiVercel />
+          </span>{' '}
+          <strong className=" font-family-plaster">Vercel</strong>
+        </p> */}
+      </div>
     </div>
   );
 };
