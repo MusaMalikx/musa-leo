@@ -16,6 +16,11 @@ module.exports = {
         'light-border': '#F7f7f7',
         'primary-dark': '#F96666',
         'primary-light': '#FF1E1E',
+        linkedin: '#0B66C2',
+        snapchat: '#F7F300',
+        facebook: '#0088FF',
+        instagram: '#E100A6',
+        email: '#34A853', //#EA4336',
       },
       fontFamily: {
         'family-poppins': 'Poppins',

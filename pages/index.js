@@ -4,6 +4,7 @@ import About from '../components/About/About';
 import WhatIDo from '../components/WhatIDo/WhatIDo';
 import WhatIOffer from '../components/WhatIOffer/WhatIOffer';
 import Skills from '../components/Skills/Skills';
+import Footer from '../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <WhatIOffer />
         <Skills />
       </main>
-
+      <Footer />
       {/* <footer className="flex h-24 w-full items-center justify-center border-t">
         <a
           className="flex items-center justify-center gap-2"
