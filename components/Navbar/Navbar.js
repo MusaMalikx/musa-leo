@@ -1,10 +1,10 @@
-import ThemeIcon from '../Theme/ThemeToggleIcon';
-import { motion, useScroll, useSpring } from 'framer-motion';
-import DivMotion from '../Layout/Motions/DivMotion';
-import { FramerMotionNavbar } from './FramerMotionNavbar';
-import { useState } from 'react';
+import ThemeIcon from "../Theme/ThemeToggleIcon";
+import { motion, useScroll, useSpring } from "framer-motion";
+import DivMotion from "../Layout/Motions/DivMotion";
+import { FramerMotionNavbar } from "./FramerMotionNavbar";
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ bool }) => {
   const [name, setName] = useState(true);
   const toggleName = () => setName(!name);
   const { scrollYProgress } = useScroll();
@@ -17,21 +17,28 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 backdrop-blur-md shadow-md bg-light/40 dark:bg-dark/40 z-10">
       <motion.div
-        className="progress-bar absolute top-[88px] sm:top-[98px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
+        className="progress-bar absolute top-[88px] sm:top-[96px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
         style={{ scaleX }}
       />
       <div className="flex items-center justify-between py-7 ">
-        <div className="relative">
-          <FramerMotionNavbar />
-          <div className="w-20" />
-        </div>
-        <div className="flex space-x-1.5">
+        {bool && (
+          <div className="relative">
+            <FramerMotionNavbar />
+            <div className="w-20" />
+          </div>
+        )}
+        <div className={`flex space-x-1.5 ${!bool && "ml-8"}`}>
           <p className="text-xl sm:text-3xl">&lt; </p>
           <div className="text-2xl sm:text-4xl font-thin font-family-noto-serif-sc tracking-widest cursor-none">
             {name && (
               <DivMotion onMouseEnter={toggleName}>
-                <strong className="text-primary-light dark:text-primary-dark">穆</strong>萨
-                <strong className="text-primary-light dark:text-primary-dark">马</strong>
+                <strong className="text-primary-light dark:text-primary-dark">
+                  穆
+                </strong>
+                萨
+                <strong className="text-primary-light dark:text-primary-dark">
+                  马
+                </strong>
                 利克
               </DivMotion>
             )}
@@ -40,8 +47,13 @@ const Navbar = () => {
                 className="font-family-montserrat whitespace-nowrap"
                 onMouseLeave={toggleName}
               >
-                <strong className="text-primary-light dark:text-primary-dark">M</strong>
-                usa <strong className="text-primary-light dark:text-primary-dark">M</strong>
+                <strong className="text-primary-light dark:text-primary-dark">
+                  M
+                </strong>
+                usa{" "}
+                <strong className="text-primary-light dark:text-primary-dark">
+                  M
+                </strong>
                 alik
               </DivMotion>
             )}

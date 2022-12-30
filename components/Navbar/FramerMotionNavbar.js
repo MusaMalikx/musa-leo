@@ -1,21 +1,24 @@
-import { useRef } from 'react';
-import { motion, useCycle } from 'framer-motion';
-import { useDimensions } from '../../utils/useDimensions';
+import { useRef } from "react";
+import { motion, useCycle } from "framer-motion";
+import { useDimensions } from "../../utils/useDimensions";
+import { SiKnowledgebase, SiTodoist } from "react-icons/si";
+import { TfiLayoutSliderAlt } from "react-icons/tfi";
+import { GiSkills } from "react-icons/gi";
 
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: 'circle(0px at 60px 53px)',
+    clipPath: "circle(0px at 60px 53px)",
     transition: {
       delay: 0.5,
-      type: 'spring',
+      type: "spring",
       stiffness: 400,
       damping: 40,
     },
@@ -33,7 +36,7 @@ export const FramerMotionNavbar = () => {
       <motion.nav
         className="absolute top-0 left-0 bottom-0 w-[300px] z-50"
         initial={false}
-        animate={isOpen ? 'open' : 'closed'}
+        animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
       >
@@ -76,10 +79,15 @@ const MenuItem = ({ text }) => {
       whileTap={{ scale: 0.95 }}
       className="m-0 p-0 mb-5 flex items-center cursor-pointer"
     >
-      <div className="icon-placeholder w-10 h-10 mr-5 rounded-[50%] flex-[40px 0] border-2 dark:border-primary-dark border-primary-light" />
-      <div className="text-placeholder rounded text-center flex-1 border-2 dark:border-primary-dark border-primary-light">
-        {text.text}
+      <div className="icon-placeholder flex items-center justify-center w-10 h-10 mr-5 rounded-[50%] flex-[40px 0] border-2 dark:border-primary-dark text-border-light border-primary-light">
+        {text.icon}
       </div>
+      <a
+        href={text.id}
+        className="text-placeholder rounded text-center flex-1 border-2 dark:border-primary-dark border-primary-light"
+      >
+        {text.text}
+      </a>
     </motion.li>
   );
 };
@@ -105,8 +113,8 @@ const MenuToggle = ({ toggle }) => (
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
-          closed: { d: 'M 2 2.5 L 20 2.5' },
-          open: { d: 'M 3 16.5 L 17 2.5' },
+          closed: { d: "M 2 2.5 L 20 2.5" },
+          open: { d: "M 3 16.5 L 17 2.5" },
         }}
       />
       <Path
@@ -119,8 +127,8 @@ const MenuToggle = ({ toggle }) => (
       />
       <Path
         variants={{
-          closed: { d: 'M 2 16.346 L 20 16.346' },
-          open: { d: 'M 3 2.5 L 17 16.346' },
+          closed: { d: "M 2 16.346 L 20 16.346" },
+          open: { d: "M 3 2.5 L 17 16.346" },
         }}
       />
     </svg>
@@ -146,19 +154,23 @@ const Navigation = () => (
 
 const itemIds = [
   {
-    text: 'About me',
-    id: '#about',
+    text: "About me",
+    id: "#about",
+    icon: <SiKnowledgebase />,
   },
   {
-    text: 'What I Do',
-    id: '#about',
+    text: "What I Do",
+    id: "#whatIDo",
+    icon: <SiTodoist />,
   },
   {
-    text: 'About me',
-    id: '#about',
+    text: "What I Offer",
+    id: "#whatIOffer",
+    icon: <TfiLayoutSliderAlt />,
   },
   {
-    text: 'About me',
-    id: '#about',
+    text: "Skills",
+    id: "#skills",
+    icon: <GiSkills />,
   },
 ];

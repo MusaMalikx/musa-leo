@@ -1,30 +1,29 @@
-// import { useEffect, useRef, useState } from 'react';
-// import { LottiePlayer } from 'lottie-web';
-// import Lottie from 'lottie-web';
+import React from "react";
+import Lottie from "react-lottie";
+import lottie from "../../assets/animations/71486-rounding-lines-red.json";
+import useWindowSize from "../../utils/screen";
 
-// export const Loader = () => {
-//   const ref = useRef(null);
-//   const [lottie, setLottie] = useState(null);
+const Loader = () => {
+  const { width } = useWindowSize();
+  return (
+    <div className="fixed top-0 left-0 right-0 bottom-0 bg-light-border/50 dark:bg-dark-border/50 backdrop-blur-xl z-50 overflow-hidden">
+      <div className="flex items-center justify-center h-full">
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: lottie,
+            rendererSettings: {
+              preserveAspectRatio: "xMidYMid slice",
+            },
+          }}
+          isClickToPauseDisabled
+          height={width > 768 ? 300 : 200}
+          width={width > 768 ? 300 : 200}
+        />
+      </div>
+    </div>
+  );
+};
 
-//   //   useEffect(() => {
-//   //     // import('lottie-web').then((Lottie) => setLottie(LottiePlayer.default));
-//   //     setLottie(Lottie.default);
-//   //   }, []);
-
-//   useEffect(() => {
-//     if (ref.current) {
-//       const animation = Lottie.loadAnimation({
-//         container: ref.current,
-//         renderer: 'svg',
-//         loop: true,
-//         autoplay: true,
-//         // path to your animation file, place it inside public folder
-//         path: '/animation.json',
-//       });
-
-//       return () => animation.destroy();
-//     }
-//   }, [lottie]);
-
-//   return <div ref={ref} />;
-// };
+export default Loader;
