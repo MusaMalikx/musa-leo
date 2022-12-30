@@ -39,6 +39,7 @@ const Footer = () => {
                 src={Avatar} //"https://sahilnetic.xyz/evilcat.png"
                 width="40"
                 height="40"
+                alt="avatar"
               />
             </div>
 

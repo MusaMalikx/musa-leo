@@ -25,9 +25,8 @@ module.exports = {
       fontFamily: {
         'family-poppins': 'Poppins',
         'family-montserrat': 'Montserrat',
-        'family-dancing-script': 'Dancing Script',
-        'family-noto-serif-sc': 'Noto Serif SC',
         'family-plaster': 'Plaster',
+        'family-stencil': 'Big Shoulders Stencil Text',
       },
     },
   },

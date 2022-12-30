@@ -6,7 +6,8 @@
     "start": "next start",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "type-check": "tsc --pretty --noEmit",
-    "lint": "eslint . --ext ts --ext tsx --ext js"
+    "lint": "eslint ./components/** ./pages/** -c .eslintrc.json --ext js,jsx",
+    "lint-fix": "eslint ./components/** ./pages/** -c .eslintrc.json --fix --ext js,jsx"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "framer-motion": "^8.0.2",
+    "lottie-web": "^5.10.1",
     "next": "latest",
     "next-themes": "^0.2.1",
     "prop-types": "^15.8.1",
@@ -30,18 +32,25 @@
     "react-icons": "^4.7.1",
     "react-lottie": "^1.2.3",
     "react-simple-typewriter": "^5.0.1",
-    "scroller-motion": "^1.2.1"
+    "scroller-motion": "^1.2.1",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.12",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
-    "eslint": "^8.30.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.18",

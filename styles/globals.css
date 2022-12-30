@@ -7,10 +7,9 @@
     @apply bg-white bg-opacity-[87%] text-gray-900 dark:bg-[#121212] dark:text-gray-100;
     @apply min-h-screen;
   }
-}
-
-body {
-  overscroll-behavior: none;
+  html {
+    @apply scroll-smooth;
+  }
 }
 
 :root {

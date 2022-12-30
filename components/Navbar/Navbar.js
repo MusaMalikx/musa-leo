@@ -15,7 +15,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="fixed top-0 w-full backdrop-blur-md shadow-md bg-light/40 dark:bg-dark/40 z-10">
+    <div className="sticky top-0 backdrop-blur-md shadow-md bg-light/40 dark:bg-dark/40 z-10">
       <motion.div
         className="progress-bar absolute top-[88px] sm:top-[98px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
         style={{ scaleX }}
@@ -25,8 +25,8 @@ const Navbar = () => {
           <FramerMotionNavbar />
           <div className="w-20" />
         </div>
-        <div className="flex space-x-1">
-          <p className="text-xl sm:text-3xl mt-1 sm:mt-1.5">&lt; </p>
+        <div className="flex space-x-1.5">
+          <p className="text-xl sm:text-3xl">&lt; </p>
           <div className="text-2xl sm:text-4xl font-thin font-family-noto-serif-sc tracking-widest cursor-none">
             {name && (
               <DivMotion onMouseEnter={toggleName}>
@@ -46,7 +46,7 @@ const Navbar = () => {
               </DivMotion>
             )}
           </div>
-          <p className="text-xl sm:text-3xl mt-1 sm:mt-1.5"> &gt; </p>
+          <p className="text-xl sm:text-3xl mt-1"> &gt; </p>
         </div>
         <DivMotion className="flex">
           <div className="mr-8">
