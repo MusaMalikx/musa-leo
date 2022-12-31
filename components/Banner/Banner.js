@@ -1,9 +1,10 @@
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import lottie1 from "../../assets/animations/63487-programming-computer.json";
 import lottie4 from "../../assets/animations/53345-red-circle.json";
 import { motion } from "framer-motion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import useWindowSize from "../../utils/screen";
+import Lottie from "react-lottie-player";
 
 const Banner = () => {
   const { width } = useWindowSize();
@@ -21,19 +22,23 @@ const Banner = () => {
   return (
     <section id="top">
       <div className="flex items-center justify-center relative">
-        <div className="hidden md:block">
+        <div className="hidden md:flex w-full items-center justify-center">
           <Lottie
-            options={{
-              loop: true,
-              autoplay: true,
-              animationData: lottie4,
-              rendererSettings: {
-                preserveAspectRatio: "xMidYMid slice",
-              },
-            }}
-            isClickToPauseDisabled
-            height={600}
-            width={600}
+            loop
+            animationData={lottie4}
+            play
+            style={{ width: 600, height: 600 }}
+            // options={{
+            //   loop: true,
+            //   autoplay: true,
+            //   animationData: lottie4,
+            //   rendererSettings: {
+            //     preserveAspectRatio: "xMidYMid slice",
+            //   },
+            // }}
+            // isClickToPauseDisabled
+            // height={600}
+            // width={600}
           />
         </div>
         <motion.div
@@ -41,22 +46,30 @@ const Banner = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -40, opacity: 0 }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="md:absolute "
+          className="md:absolute w-full"
         >
-          <div className="flex flex-col flex-grow text-nowwrap">
-            <div className="overflow-hidden">
+          <div className="flex flex-col text-nowwrap">
+            <div className="overflow-hidden flex w-full items-center justify-center">
               <Lottie
-                options={{
-                  loop: true,
-                  autoplay: true,
-                  animationData: lottie1,
-                  rendererSettings: {
-                    preserveAspectRatio: "xMidYMid slice",
-                  },
+                // options={{
+                //   loop: true,
+                //   autoplay: true,
+                //   animationData: lottie1,
+                //   rendererSettings: {
+                //     preserveAspectRatio: "xMidYMid slice",
+                //   },
+                // }}
+                // isClickToPauseDisabled
+                // height={width > 768 ? 500 : 400}
+                // width={width > 768 ? 500 : 400}
+                loop
+                animationData={lottie1}
+                play
+                style={{
+                  width: width > 768 ? 600 : 500,
+                  height: width > 768 ? 600 : 500,
                 }}
-                isClickToPauseDisabled
-                height={width > 768 ? 500 : 400}
-                width={width > 768 ? 500 : 400}
+                className="m-0"
               />
             </div>
             <p className="text-center font-thin text-xs md:text-base mb-4 font-family-montserrat uppercase">
