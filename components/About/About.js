@@ -11,7 +11,7 @@ import Lottie from "react-lottie-player";
 
 const About = () => {
   const { width } = useWindowSize();
-  const router = useRouter()
+  const router = useRouter();
   return (
     <section id="about">
       <div className="mt-20">
@@ -34,7 +34,7 @@ const About = () => {
               // width={width > 768 ? 600 : 400}
               loop
               animationData={lottie2}
-              play={width > 768 ? true : false}
+              play
               style={{
                 width: width > 768 ? 600 : 400,
                 height: width > 768 ? 600 : 400,
