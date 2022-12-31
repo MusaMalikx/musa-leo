@@ -18,7 +18,7 @@ const Layout = ({ children, router, bool }) => {
 
   return (
     <div>
-      <MotionConfig reducedMotion="always">
+      {/* <MotionConfig reducedMotion="always"> */}
         {/* <motion.div
         initial="hidden"
         animate="enter"
@@ -36,7 +36,7 @@ const Layout = ({ children, router, bool }) => {
 
         {children}
         {/* </motion.div> */}
-      </MotionConfig>
+      {/* </MotionConfig> */}
     </div>
   );
 };

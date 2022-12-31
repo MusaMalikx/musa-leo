@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderLayout from '../Layout/HeaderLayout';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 import lottie from '../../assets/animations/119356-development.json';
 import useWindowSize from '../../utils/screen';
 import ScrollRightMotion from '../Layout/Motions/ScrollRightMotion';
 import ScrollLeftMotion from '../Layout/Motions/ScrollLeftMotion';
+import Lottie from 'react-lottie-player';
 
 const WhatIDo = () => {
   const { width } = useWindowSize();
@@ -75,17 +76,24 @@ const WhatIDo = () => {
           </div>
           <ScrollRightMotion className="flex justify-center items-center mb-20 md:mb-0">
             <Lottie
-              options={{
-                loop: true,
-                autoplay: true,
-                animationData: lottie,
-                rendererSettings: {
-                  preserveAspectRatio: "xMidYMid slice",
-                },
+              // options={{
+              //   loop: true,
+              //   autoplay: true,
+              //   animationData: lottie,
+              //   rendererSettings: {
+              //     preserveAspectRatio: "xMidYMid slice",
+              //   },
+              // }}
+              // isClickToPauseDisabled
+              // height={width > 768 ? 400 : 300}
+              // width={width > 768 ? 400 : 300}
+              loop
+              animationData={lottie}
+              play
+              style={{
+                width: width > 768 ? 500 : 400,
+                height: width > 768 ? 500 : 400,
               }}
-              isClickToPauseDisabled
-              height={width > 768 ? 400 : 300}
-              width={width > 768 ? 400 : 300}
             />
           </ScrollRightMotion>
         </div>

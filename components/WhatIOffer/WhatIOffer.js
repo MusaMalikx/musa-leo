@@ -1,5 +1,5 @@
 import React from 'react';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 import HeaderLayout from '../Layout/HeaderLayout';
 import lottie from '../../assets/animations/17391-responsive-morphing-infographics.json';
 import useWindowSize from '../../utils/screen';
@@ -8,6 +8,7 @@ import { AiOutlineAntDesign } from 'react-icons/ai';
 import { SiAffinitydesigner, SiMaterialdesign } from 'react-icons/si';
 import { CgIfDesign } from 'react-icons/cg';
 import ScrollRightMotion from '../Layout/Motions/ScrollRightMotion';
+import Lottie from 'react-lottie-player';
 
 const WhatIOffer = () => {
   const { width } = useWindowSize();
@@ -32,17 +33,25 @@ const WhatIOffer = () => {
           </ScrollRightMotion>
         </div>
         <Lottie
-          options={{
-            loop: true,
-            autoplay: true,
-            animationData: lottie,
-            rendererSettings: {
-              preserveAspectRatio: "xMidYMid slice",
-            },
+          // options={{
+          //   loop: true,
+          //   autoplay: true,
+          //   animationData: lottie,
+          //   rendererSettings: {
+          //     preserveAspectRatio: "xMidYMid slice",
+          //   },
+          // }}
+          // isClickToPauseDisabled
+          // height={width > 768 ? 400 : 300}
+          // width={width > 768 ? 400 : 300}
+          loop
+          animationData={lottie}
+          play
+          style={{
+            width: width > 768 ? 600 : 500,
+            height: width > 768 ? 600 : 500,
           }}
-          isClickToPauseDisabled
-          height={width > 768 ? 400 : 300}
-          width={width > 768 ? 400 : 300}
+          className="mx-auto"
         />
         <div className="flex flex-col md:flex-row items-center justify-between md:max-w-3xl mx-auto space-y-8 md:space-y-0">
           <ScrollLeftMotion className="flex flex-col items-center md:items-start">
