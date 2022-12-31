@@ -22,7 +22,7 @@ const Banner = () => {
   return (
     <section id="top">
       <div className="flex items-center justify-center relative">
-        <div className="flex w-full items-center justify-center">
+        <div className="hidden md:flex w-full items-center justify-center">
           <Lottie
             loop
             animationData={lottie4}
@@ -46,7 +46,7 @@ const Banner = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -40, opacity: 0 }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="absolute w-full"
+          className="md:absolute w-full"
         >
           <div className="flex flex-col text-nowwrap">
             <div className="overflow-hidden flex w-full items-center justify-center">
