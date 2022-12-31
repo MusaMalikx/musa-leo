@@ -26,7 +26,7 @@ const Banner = () => {
           <Lottie
             loop
             animationData={lottie4}
-            play
+            play={width > 768 ? true : false}
             style={{ width: 600, height: 600 }}
             // options={{
             //   loop: true,
@@ -64,7 +64,7 @@ const Banner = () => {
                 // width={width > 768 ? 500 : 400}
                 loop
                 animationData={lottie1}
-                play
+                play={width > 768 ? true : false}
                 style={{
                   width: width > 768 ? 600 : 500,
                   height: width > 768 ? 600 : 500,

@@ -46,10 +46,10 @@ const WhatIOffer = () => {
           // width={width > 768 ? 400 : 300}
           loop
           animationData={lottie}
-          play
+          play={width > 768 ? true : false}
           style={{
-            width: width > 768 ? 600 : 500,
-            height: width > 768 ? 600 : 500,
+            width: width > 768 ? 500 : 400,
+            height: width > 768 ? 500 : 400,
           }}
           className="mx-auto"
         />
