@@ -36,8 +36,8 @@ const About = () => {
               animationData={lottie2}
               play={width > 768 ? true : false}
               style={{
-                width: width > 768 ? 600 : 500,
-                height: width > 768 ? 600 : 500,
+                width: width > 768 ? 600 : 400,
+                height: width > 768 ? 600 : 400,
               }}
             />
           </div>
