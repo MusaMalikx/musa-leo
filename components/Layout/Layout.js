@@ -5,7 +5,7 @@ import Loader from "../Animations/Loader";
 // import { ScrollerMotion } from 'scroller-motion';
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 
 const Layout = ({ children, router, bool }) => {
   //   console.log(router.asPath);
@@ -17,23 +17,27 @@ const Layout = ({ children, router, bool }) => {
   //   };
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      //   variants={variants}
-      transition={{ duration: 0.4, type: "easeInOut" }}
-      style={{ position: "relative" }}
-      className="min-h-screen"
-    >
-      <Navbar bool={bool} />
-      {/* <Head>
+    <div>
+      <MotionConfig reducedMotion="always">
+        {/* <motion.div
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        //   variants={variants}
+        transition={{ duration: 0.4, type: "easeInOut" }}
+        style={{ position: "relative" }}
+        className="min-h-screen"
+      > */}
+        <Navbar bool={bool} />
+        {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Musa Malik - Homepage</title>
       </Head> */}
 
-      {children}
-    </motion.div>
+        {children}
+        {/* </motion.div> */}
+      </MotionConfig>
+    </div>
   );
 };
 
