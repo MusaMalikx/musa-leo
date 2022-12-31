@@ -89,7 +89,6 @@ const WhatIDo = () => {
               // width={width > 768 ? 400 : 300}
               loop
               animationData={lottie}
-              play={width > 768 ? true : false}
               style={{
                 width: width > 768 ? 500 : 300,
                 height: width > 768 ? 500 : 300,
