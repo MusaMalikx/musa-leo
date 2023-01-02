@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { IoCaretBackSharp } from "react-icons/io5";
 import Layout from "../components/Layout/Layout";
-import Grid from "../components/portfolio/Grid";
+import Grid from "../components/work/Grid";
 
 const portfolio1 = () => {
   const router = useRouter();
