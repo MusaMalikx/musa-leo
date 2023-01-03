@@ -6,20 +6,21 @@ import Loader from "../Animations/Loader";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { motion, MotionConfig } from "framer-motion";
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 
 const Layout = ({ children, router, bool }) => {
   //   console.log(router.asPath);
 
-  //   const variants = {
-  //     hidden: { opacity: 0, x: 0, y: 20 },
-  //     enter: { opacity: 1, x: 0, y: 0 },
-  //     exit: { opacity: 0, x: 0, y: 20 },
-  //   };
+  const variants = {
+    hidden: { opacity: 0, x: 0, y: 20 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 20 },
+  };
 
   return (
     <div>
       {/* <MotionConfig reducedMotion="always"> */}
-        {/* <motion.div
+      <motion.div
         initial="hidden"
         animate="enter"
         exit="exit"
@@ -27,7 +28,7 @@ const Layout = ({ children, router, bool }) => {
         transition={{ duration: 0.4, type: "easeInOut" }}
         style={{ position: "relative" }}
         className="min-h-screen"
-      > */}
+      >
         <Navbar bool={bool} />
         {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,7 +36,18 @@ const Layout = ({ children, router, bool }) => {
       </Head> */}
 
         {children}
-        {/* </motion.div> */}
+        <div
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            })
+          }
+        >
+          <ScrollUpButton EasingType="easeOutCubic" AnimationDuration={500}  />
+        </div>
+      </motion.div>
       {/* </MotionConfig> */}
     </div>
   );

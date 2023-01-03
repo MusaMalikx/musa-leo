@@ -20,3 +20,7 @@
   --primary-dark: #f96666;
   --primary-light: #ff1e1e;
 }
+
+.rodal-dialog {
+  padding: 0px;
+}

@@ -15,7 +15,7 @@ const Main = ({ children, router }) => {
   //     setLoader(false);
   //   }, 2000);
   // }, []);
-  console.log(router.asPath);
+  // console.log(router.asPath);
   return (
     <div>
       <Head>
