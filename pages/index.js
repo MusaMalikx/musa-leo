@@ -6,6 +6,7 @@ import Skills from "../components/Skills/Skills";
 import Lottie from "react-lottie";
 import lottie from "../assets/animations/71745-loader.json";
 import Layout from "../components/Layout/Layout";
+import Arrow from "../components/Arrow/Arrow";
 // import Footer from '../components/Footer/Footer';
 // import { ScrollerMotion } from 'scroller-motion';
 // import Head from 'next/head';

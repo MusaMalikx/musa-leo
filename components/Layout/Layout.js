@@ -7,15 +7,25 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { motion, MotionConfig } from "framer-motion";
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
+import ScrollRightMotion from "./Motions/ScrollRightMotion";
+import useWindowSize from "../../utils/screen";
+import Arrow from "../Arrow/Arrow";
+
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 20 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: 20 },
+};
 
 const Layout = ({ children, router, bool }) => {
   //   console.log(router.asPath);
 
-  const variants = {
-    hidden: { opacity: 0, x: 0, y: 20 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: 20 },
-  };
+
+  const { height } = useWindowSize();
+
+    // useEffect(() => {
+    //   console.log(window.screenY);
+    // });
 
   return (
     <div>
@@ -27,7 +37,7 @@ const Layout = ({ children, router, bool }) => {
         //   variants={variants}
         transition={{ duration: 0.4, type: "easeInOut" }}
         style={{ position: "relative" }}
-        className="min-h-screen"
+        className="min-h-screen font-family-montserrat"
       >
         <Navbar bool={bool} />
         {/* <Head>
@@ -36,18 +46,8 @@ const Layout = ({ children, router, bool }) => {
       </Head> */}
 
         {children}
-        <div
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: "smooth",
-            })
-          }
-        >
-          <ScrollUpButton EasingType="easeOutCubic" AnimationDuration={500}  />
-        </div>
       </motion.div>
+      <Arrow />
       {/* </MotionConfig> */}
     </div>
   );

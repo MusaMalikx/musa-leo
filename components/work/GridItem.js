@@ -13,7 +13,7 @@ import {
 import useWindowSize from "../../utils/screen";
 import { motion } from "framer-motion";
 
-const GridItem = ({ bool }) => {
+const GridItem = ({ image }) => {
   const [open, setOpen] = useState(false);
   const { width } = useWindowSize();
   const { theme } = useTheme();
@@ -32,29 +32,57 @@ const GridItem = ({ bool }) => {
       }}
       //   transition={{ ease: "easeOut", duration: 1 }}
       whileHover={{
-        scale: 0.9,
+        scale: 0.95,
         transition: { duration: 0.5 },
       }}
-      whileTap={{ scale: 0.9 }}
-      className={`${bool && "md:col-span-2"}`}
+      // whileTap={{ scale: 0.9 }}
+      whileFocus={{ scale: 0.8 }}
     >
       {/* <div>
         <AwesomeButton onPress={() => setOpen(true)}>Button</AwesomeButton>
       </div> */}
       {/* // */}
-      <div
-        onClick={() => setOpen(true)}
-        className="rounded-lg h-80 cursor-pointer bg-primary-dark"
+      <motion.div
+        // onClick={() => setOpen(true)}
+        // className="rounded-lg h-72 cursor-pointer bg-primary-dark "
+        className="grid grid-cols-1 md:grid-cols-2 bg-primary-dark/50  p-5 rounded-lg overflow-hidden"
       >
-        {/* <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-          placeholder="blur"
-          width={1920}
-          height={1080}
-          blurDataURL="/blur.jpg"
-          className="rounded-lg h-80 cursor-pointer"
-        /> */}
-      </div>
+        <div className="flex justify-end mt-10 md:mt-0 flex-col pb-10 md:pb-0 mr-5 space-y-4">
+          <h1 className="font-bold text-2xl md:text-4xl">App Name</h1>
+          <p className="text-sm md:text-base">
+            Description Vivamus dui dui, imperdiet non facilisis eget, commodo a
+            enim. Nulla viverra sem dui.
+          </p>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            onClick={() => setOpen(true)}
+            // onClick={() => router.push("/work")}
+            className="hover:bg-light/30 hover:dark:bg-dark/30 px-3 py-2 rounded-md focus:ring-2 focus:ring-primary-light focus:dark:ring-primary-dark ring-offset-2 ring-offset-light dark:ring-offset-dark "
+          >
+            Learn more
+          </motion.button>
+        </div>
+        <motion.div
+          whileHover={{
+            transition: {
+              delay: 0.5,
+              x: { duration: 1 },
+              default: { ease: "linear" },
+            },
+          }}
+          className="my-auto"
+        >
+          <Image
+            src={image}
+            placeholder="blur"
+            width={1920}
+            height={1080}
+            blurDataURL="/blur.jpg"
+            alt="image"
+            className="rounded-lg"
+          />
+        </motion.div>
+      </motion.div>
       <div
         className="rss-backdrop z-50"
         // style={{ background: "#f7f8f8", minHeight: "100vh" }}
