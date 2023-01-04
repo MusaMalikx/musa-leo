@@ -21,7 +21,7 @@ const Navbar = ({ bool }) => {
   return (
     <div className="sticky top-0 backdrop-blur-md shadow-md bg-light/40 dark:bg-dark/40 z-10">
       <motion.div
-        className="progress-bar absolute top-[144px] sm:top-[96px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
+        className="progress-bar absolute top-[140px] sm:top-[96px] left-0 right-0 h-0.5 bg-primary-light dark:bg-primary-dark rounded-r-lg z-10 origin-left"
         style={{ scaleX: width > 768 ? scaleX : scrollYProgress }}
       />
       <div className="flex items-center justify-between pt-7 pb-5 sm:py-7 ">

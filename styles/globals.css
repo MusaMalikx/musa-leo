@@ -4,8 +4,14 @@
 
 @layer base {
   body {
-    @apply bg-white bg-opacity-[87%] text-gray-900 dark:bg-[#121212] dark:text-gray-100;
+    @apply bg-light bg-opacity-[87%] text-gray-900 dark:bg-dark dark:text-gray-100;
     @apply min-h-screen;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
   html {
     @apply scroll-smooth;
@@ -19,8 +25,4 @@
   --border-light: #37474f;
   --primary-dark: #f96666;
   --primary-light: #ff1e1e;
-}
-
-.rodal-dialog {
-  padding: 0px;
 }

@@ -16,6 +16,7 @@ const portfolio1 = () => {
             Home
           </span>
         </div>
+        <div className="uppercase font-family-plaster text-4xl sm:text-6xl lg:text-9xl text-center mb-20">Work</div>
         <Grid />
       </div>
     </Layout>
