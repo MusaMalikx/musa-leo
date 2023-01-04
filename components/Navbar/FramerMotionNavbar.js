@@ -34,7 +34,7 @@ export const FramerMotionNavbar = () => {
     <>
       {/* <FramerMotionNavbarBg toggleOpen={() => toggleOpen()} isOpen={isOpen} /> */}
       <motion.nav
-        className="absolute top-0 left-0 bottom-0 w-[300px] z-50"
+        className="absolute top-0 left-0 bottom-0 w-[300px] z-20"
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}

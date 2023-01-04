@@ -18,6 +18,10 @@
   }
 }
 
+_8eLsd {
+  height: 70vh;
+}
+
 :root {
   --dark: #121212;
   --light: #f9f9f9;
@@ -25,4 +29,14 @@
   --border-light: #37474f;
   --primary-dark: #f96666;
   --primary-light: #ff1e1e;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-dark);
+  border-radius: 12px;
 }

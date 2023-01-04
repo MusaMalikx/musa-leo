@@ -12,13 +12,15 @@ import {
 } from "react-sheet-slide";
 import useWindowSize from "../../utils/screen";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
-const GridItem = ({ image }) => {
+const GridItem = ({ data }) => {
   const [open, setOpen] = useState(false);
   const { width } = useWindowSize();
   const { theme } = useTheme();
   //   console.log(theme);
   const ref = useRef();
+  const router = useRouter();
   //   const toggle = () => setClick(!click);
 
   return (
@@ -48,16 +50,21 @@ const GridItem = ({ image }) => {
         className="grid grid-cols-1 md:grid-cols-2 bg-primary-dark/50  p-5 rounded-lg overflow-hidden"
       >
         <div className="flex justify-end mt-10 md:mt-0 flex-col pb-10 md:pb-0 mr-5 space-y-4">
-          <h1 className="font-bold text-2xl md:text-4xl">App Name</h1>
+          <p className="font-bold text-2xl md:text-4xl">{data.title}</p>
           <p className="text-sm md:text-base">
             Description Vivamus dui dui, imperdiet non facilisis eget, commodo a
             enim. Nulla viverra sem dui.
           </p>
           <motion.button
             whileTap={{ scale: 0.8 }}
-            onClick={() => setOpen(true)}
-            // onClick={() => router.push("/work")}
-            className="hover:bg-light/30 hover:dark:bg-dark/30 px-3 py-2 rounded-md focus:ring-2 focus:ring-primary-light focus:dark:ring-primary-dark ring-offset-2 ring-offset-light dark:ring-offset-dark "
+            // onClick={() => setOpen(true)}
+            onClick={() =>
+              router.push({
+                pathname: `/work/${data.title.toLowerCase()}`,
+                query: data,
+              })
+            }
+            className="hover:bg-light/40 bg-light/20 dark:bg-dark/20 hover:dark:bg-dark/40 px-3 py-2 rounded-md focus:ring-2 focus:ring-primary-light focus:dark:ring-primary-dark ring-offset-2 ring-offset-light dark:ring-offset-dark "
           >
             Learn more
           </motion.button>
@@ -73,7 +80,7 @@ const GridItem = ({ image }) => {
           className="my-auto"
         >
           <Image
-            src={image}
+            src={data.image}
             placeholder="blur"
             width={1920}
             height={1080}
@@ -83,7 +90,7 @@ const GridItem = ({ image }) => {
           />
         </motion.div>
       </motion.div>
-      <div
+      {/* <div
         className="rss-backdrop z-50"
         // style={{ background: "#f7f8f8", minHeight: "100vh" }}
       >
@@ -98,17 +105,17 @@ const GridItem = ({ image }) => {
             selectedDetent={detents.medium}
             detents={(props) => [detents.medium(props), detents.fit(props)]}
             useDarkMode={theme === "dark" ? true : false}
-            useModal={width < 768 ? false : true}
+            useModal={false}
             scrollingExpands={true}
           >
             <Header>
               <div className="flex items-center justify-between">
-                <p>Title</p>
+                <p className="font-bold text-2xl md:text-4xl">{data.title}</p>
                 <div
                   className="p-1 bg-black/20 dark:bg-white/20 rounded-2xl cursor-pointer"
                   onClick={() => setOpen(false)}
                 >
-                  <AiOutlineClose className="text-sm" />
+                  <AiOutlineClose className="text-lg" />
                 </div>
               </div>
             </Header>
@@ -129,7 +136,7 @@ const GridItem = ({ image }) => {
             </Footer>
           </Sheet>
         </Portal>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

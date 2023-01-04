@@ -46,6 +46,7 @@ const Layout = ({ children, router, bool }) => {
       </Head> */}
 
         {children}
+        <Footer />
       </motion.div>
       <Arrow />
       {/* </MotionConfig> */}

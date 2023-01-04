@@ -24,6 +24,8 @@ module.exports = {
         facebook: "#0088FF",
         instagram: "#E100A6",
         email: "#34A853", //#EA4336',
+        tailwind: "#39BCFA",
+        redux: "#764ABC",
       },
       fontFamily: {
         "family-poppins": "Poppins",

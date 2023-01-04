@@ -15,7 +15,7 @@ const Main = ({ children, router }) => {
   //     setLoader(false);
   //   }, 2000);
   // }, []);
-  // console.log(router.asPath);
+  console.log(router.asPath);
   return (
     <div>
       <Head>
@@ -28,7 +28,6 @@ const Main = ({ children, router }) => {
       {/* <Navbar path={router.asPath} /> */}
       <div className="min-h-screen">
         {children}
-        <Footer />
       </div>
     </div>
   );

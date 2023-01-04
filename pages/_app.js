@@ -1,9 +1,10 @@
-import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import { AnimatePresence } from "framer-motion";
-import "react-sheet-slide/style.css";
-// import { useEffect } from 'react';
 import Layout from "../components/Layout/MainLayout";
+import "react-sheet-slide/style.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "../styles/globals.css";
+// import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps, router }) {
   // useEffect(() => {
