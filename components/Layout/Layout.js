@@ -20,16 +20,16 @@ const variants = {
 const Layout = ({ children, router, bool }) => {
   //   console.log(router.asPath);
 
-
   const { height } = useWindowSize();
 
-    // useEffect(() => {
-    //   console.log(window.screenY);
-    // });
+  // useEffect(() => {
+  //   console.log(window.screenY);
+  // });
 
   return (
     <div>
       {/* <MotionConfig reducedMotion="always"> */}
+      <Navbar bool={bool} />
       <motion.div
         initial="hidden"
         animate="enter"
@@ -37,17 +37,16 @@ const Layout = ({ children, router, bool }) => {
         //   variants={variants}
         transition={{ duration: 0.4, type: "easeInOut" }}
         style={{ position: "relative" }}
-        className="min-h-screen font-family-montserrat"
+        className="min-h-screen font-family-montserrat flex-grow"
       >
-        <Navbar bool={bool} />
         {/* <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Musa Malik - Homepage</title>
       </Head> */}
 
         {children}
-        <Footer />
       </motion.div>
+      <Footer />
       <Arrow />
       {/* </MotionConfig> */}
     </div>

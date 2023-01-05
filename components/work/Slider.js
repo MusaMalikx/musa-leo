@@ -24,17 +24,18 @@ const Slider = ({ image }) => {
   });
 
   return (
-    <div>
+    <div className="">
       <Carousel
         showArrows={true}
         autoPlay
         infiniteLoop
         showIndicators
         showStatus
-        showThumbs
+        // showThumbs
         dynamicHeight={false}
         interval={2000}
         swipeable
+        className="max-w-3xl mx-auto"
         // {...getConfigurableProps()}
         // centerMode
         // centerSlidePercentage={80}

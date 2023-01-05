@@ -26,6 +26,8 @@ module.exports = {
         email: "#34A853", //#EA4336',
         tailwind: "#39BCFA",
         redux: "#764ABC",
+        firebase: "#FFCB35",
+        react: "#5FD3F3",
       },
       fontFamily: {
         "family-poppins": "Poppins",

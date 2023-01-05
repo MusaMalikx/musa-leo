@@ -47,7 +47,7 @@ const GridItem = ({ data }) => {
       <motion.div
         // onClick={() => setOpen(true)}
         // className="rounded-lg h-72 cursor-pointer bg-primary-dark "
-        className="grid grid-cols-1 md:grid-cols-2 bg-primary-dark/50  p-5 rounded-lg overflow-hidden"
+        className="grid grid-cols-1 md:grid-cols-2 bg-primary-dark/60  p-5 rounded-lg overflow-hidden"
       >
         <div className="flex justify-end mt-10 md:mt-0 flex-col pb-10 md:pb-0 mr-5 space-y-4">
           <p className="font-bold text-2xl md:text-4xl">{data.title}</p>

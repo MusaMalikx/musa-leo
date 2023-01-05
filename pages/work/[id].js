@@ -14,8 +14,8 @@ const WorkItem = () => {
 
   return (
     <Layout>
-      <div className="container px-10 mx-auto py-7">
-        <div className="flex items-center space-x-2 ml-8 mb-10">
+      <div className="container px-10 mx-auto py-7 ">
+        <div className="flex items-center space-x-2 mb-10">
           <span>
             <IoCaretBackSharp className="text-primary-light dark:text-primary-dark text-2xl" />
           </span>
@@ -46,11 +46,14 @@ const WorkItem = () => {
         <div className="space-y-3 mb-10 md:mb-20">
           <Badge text="website" link={true} />
           <Badge text="source" source={true} />
-          <div className="flex gap-2">
+          <div className="flex justify-start items-center gap-1">
             <Badge text="stack" />
-            <div className="flex flex-wrap gap-2 items-center space-x-2">
-            <TechBadge tailwind />
-            <TechBadge redux />
+            <div className="flex flex-wrap gap-3 items-center space-x-1">
+              <TechBadge tailwind />
+              <TechBadge redux />
+              <TechBadge firebase />
+              <TechBadge react />
+              <TechBadge next />
             </div>
           </div>
         </div>

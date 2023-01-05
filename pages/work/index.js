@@ -7,7 +7,7 @@ const portfolio1 = () => {
   const router = useRouter();
   return (
     <Layout>
-      <div className="container mx-auto py-7">
+      <div className="container px-10 mx-auto py-7">
         <div className="flex ml-8 mb-10" onClick={() => router.push("/")}>
           <span>
             <IoCaretBackSharp className="text-primary-light dark:text-primary-dark text-2xl" />

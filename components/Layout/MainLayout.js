@@ -26,7 +26,7 @@ const Main = ({ children, router }) => {
       {loader && <Loader />}
 
       {/* <Navbar path={router.asPath} /> */}
-      <div className="min-h-screen">
+      <div className="">
         {children}
       </div>
     </div>
