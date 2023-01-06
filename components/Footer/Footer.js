@@ -1,14 +1,15 @@
 import {
   SiGithub,
   SiLinkedin,
-  SiInstagram,
-  SiFacebook,
-  SiSnapchat,
+  // SiInstagram,
+  // SiFacebook,
+  // SiSnapchat,
   //   SiVercel,
-} from 'react-icons/si';
-import { AiTwotoneMail } from 'react-icons/ai';
-import Image from 'next/image';
-import Avatar from '../../assets/images/av.jpg';
+} from "react-icons/si";
+import { AiTwotoneMail } from "react-icons/ai";
+import Image from "next/image";
+import Avatar from "../../assets/images/av.jpg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,12 +19,21 @@ const Footer = () => {
           <h1 className="text-3xl font-extrabold leading-10 tracking-tight text-dark dark:text-light text-center sm:leading-none md:text-7xl">
             <span className="inline md:block">Join Me On</span>
             <div className="flex flex-wrap justify-center items-center text-[40px] sm:text-5xl mt-5 mb-10">
-              <SiGithub className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
-              <SiFacebook className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
+              <Link href="https://github.com/MusaMalikx" target="_blank">
+                <SiGithub className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
+              </Link>
+              {/* <SiFacebook className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
               <SiInstagram className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
-              <SiSnapchat className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
-              <SiLinkedin className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
-              <AiTwotoneMail className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
+              <SiSnapchat className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" /> */}
+              <Link
+                href="https://www.linkedin.com/in/musa-malik-1647b4197/"
+                target="_blank"
+              >
+                <SiLinkedin className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
+              </Link>
+              <Link href="mailto:muhammadmusamalik2@email.com">
+                <AiTwotoneMail className="ml-5 mb-5 border-2 border-dark dark:border-light rounded-full p-2 dark:hover:text-primary-dark hover:border-primary-light dark:hover:border-primary-dark hover:text-primary-light cursor-pointer" />
+              </Link>
             </div>
           </h1>
         </div>
@@ -44,7 +54,7 @@ const Footer = () => {
             </div>
 
             <p className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400 lg:text-right lg:mt-0">
-              Crafted with ❤️ by{' '}
+              Crafted with ❤️ by{" "}
               <span className="font-family-poppins text-primary-light dark:text-primary-dark tracking-wider font-extrabold">
                 Mr Malik ~ musamalik
               </span>
@@ -53,9 +63,10 @@ const Footer = () => {
         </div>
       </footer>
       <div className="bg-light dark:bg-dark dark:text-gray-300 text-gray-600 text-center py-2 uppercase flex items-center justify-center space-x-2 tracking-widest">
-        <span className="text-xl">©</span>{' '}
+        <span className="text-xl">©</span>{" "}
         <p className="text-xs md:text-sm flex items-center space-x-2">
-          <span>All rights reserved</span> <span className="font-family-dancing-script">2022</span>
+          <span>All rights reserved</span>{" "}
+          <span className="font-family-dancing-script">2022</span>
         </p>
         {/* <p className="text-xs md:text-sm flex items-center">
           Powered by{' '}

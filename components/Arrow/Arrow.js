@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../utils/screen";
-import ScrollRightMotion from "../Layout/Motions/ScrollRightMotion";
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Arrow = () => {
   const [scrollY, setScrollY] = useState(0);
-  // const [h, setH] = useState(0);
   const { height } = useWindowSize();
 
   useEffect(() => {
-    // setH(screen.height);
 
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -45,8 +42,6 @@ const Arrow = () => {
           }
         >
           <FaAngleDoubleUp className="m-2 text-dark-border text-3xl md:text-5xl" />
-
-          {/* <ScrollUpButton EasingType="easeOutCubic" AnimationDuration={500}  /> */}
         </motion.div>
       )}
     </>

@@ -28,6 +28,8 @@ module.exports = {
         redux: "#764ABC",
         firebase: "#FFCB35",
         react: "#5FD3F3",
+        nest: "#E0234D",
+        chakra: "#5CC8C7",
       },
       fontFamily: {
         "family-poppins": "Poppins",
@@ -37,5 +39,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

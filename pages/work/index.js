@@ -3,10 +3,10 @@ import { IoCaretBackSharp } from "react-icons/io5";
 import Layout from "../../components/Layout/Layout";
 import Grid from "../../components/work/Grid";
 
-const portfolio1 = () => {
+const Work = () => {
   const router = useRouter();
   return (
-    <Layout>
+    <Layout title="Work">
       <div className="container px-10 mx-auto py-7">
         <div className="flex ml-8 mb-10" onClick={() => router.push("/")}>
           <span>
@@ -23,4 +23,4 @@ const portfolio1 = () => {
   );
 };
 
-export default portfolio1;
+export default Work;

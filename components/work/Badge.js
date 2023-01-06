@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { BsLink,BsGithub } from "react-icons/bs";
+import { BsLink, BsGithub } from "react-icons/bs";
 
 const Badge = ({ text, link, linkText, source, sourceText }) => {
   return (
@@ -11,24 +11,24 @@ const Badge = ({ text, link, linkText, source, sourceText }) => {
       {link && (
         <Link
           target="_blank"
-          href="https://www.youtube.com/"
+          href={linkText}
           className="hover:underline hover:underline-offset-2 hover:dark:text-primary-dark hover:text-primary-light"
         >
           <div className="flex space-x-1 items-center">
             <BsLink />
-            <p>hellox</p>
+            <p>{linkText}</p>
           </div>
         </Link>
       )}
       {source && (
         <Link
           target="_blank"
-          href="https://www.youtube.com/"
+          href={sourceText}
           className="hover:underline hover:underline-offset-2 hover:dark:text-primary-dark hover:text-primary-light"
         >
           <div className="flex space-x-1 items-center">
             <BsGithub />
-            <p>hellox</p>
+            <p>{sourceText}</p>
           </div>
         </Link>
       )}

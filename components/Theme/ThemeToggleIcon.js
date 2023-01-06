@@ -37,11 +37,9 @@ const ThemeIcon = () => {
 
   return (
     <div>
-      {/* <AnimatePresence exitBeforeEnter initial={false}> */}
       <motion.div whileTap={{ scale: 0.8, transition: { duration: 0.2 }, rotate: 90 }}>
         <RenderThemeChanger />
       </motion.div>
-      {/* </AnimatePresence> */}
     </div>
   );
 };

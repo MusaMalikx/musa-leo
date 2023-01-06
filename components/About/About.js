@@ -1,4 +1,3 @@
-// import Lottie from "react-lottie";
 import lottie2 from "../../assets/animations/46147-background2.json";
 import Image from "next/image";
 import user from "../../assets/images/mr.jpg";
@@ -22,17 +21,6 @@ const About = () => {
         <ScrollLeftMotion className="relative flex justify-center items-center">
           <div className="z-10">
             <Lottie
-              // options={{
-              //   loop: true,
-              //   autoplay: true,
-              //   animationData: lottie2,
-              //   rendererSettings: {
-              //     preserveAspectRatio: "xMidYMid slice",
-              //   },
-              // }}
-              // isClickToPauseDisabled
-              // height={width > 768 ? 600 : 400}
-              // width={width > 768 ? 600 : 400}
               loop
               animationData={lottie2}
               play
@@ -61,23 +49,7 @@ const About = () => {
             and designs that are created with precision and based on your
             desire.
           </div>
-          {/* <button className="group flex justify-center items-center mx-auto md:mx-0 relative h-10 md:h-12 w-48 md:w-52 mt-10 focus:ring-2 focus:ring-primary-light/50 dark:focus:ring-primary-dark/50 ring-offset-2 ring-offset-light dark:ring-offset-dark overflow-hidden rounded-lg dark:bg-dark-border bg-light-border text-lg shadow hover:shadow-gray-700 dark:hover:shadow-gray-400">
-            <div className="absolute inset-0 w-3 bg-primary-light dark:bg-primary-dark transition-all duration-[500ms] ease-out group-hover:w-full"></div>
-            <span
-              onClick={() => router.push("/portfolio")}
-              className="relative dark:text-light text-dark dark:group-hover:text-dark group-hover:text-light tracking-wider text-sm md:text-lg"
-            >
-              See my Portfolio
-            </span>
-          </button> */}
           <div className="mt-10">
-            {/* <AwesomeButton
-              type="danger"
-              onPress={() => router.push("/portfolio")}
-              className=""
-            >
-              See my work
-            </AwesomeButton> */}
             <motion.button
               whileTap={{ scale: 1.2 }}
               className="group flex justify-center items-center mx-auto md:mx-0 relative h-10 md:h-12 w-48 md:w-52 mt-10 focus:ring-2 focus:ring-primary-light/50 dark:focus:ring-primary-dark/50 ring-offset-2 ring-offset-light dark:ring-offset-dark overflow-hidden rounded-lg dark:bg-dark-border bg-light-border text-lg shadow hover:shadow-gray-700 dark:hover:shadow-gray-400"

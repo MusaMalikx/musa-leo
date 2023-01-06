@@ -1,5 +1,4 @@
 import React from 'react';
-// import Lottie from 'react-lottie';
 import HeaderLayout from '../Layout/HeaderLayout';
 import lottie from '../../assets/animations/17391-responsive-morphing-infographics.json';
 import useWindowSize from '../../utils/screen';
@@ -33,17 +32,6 @@ const WhatIOffer = () => {
           </ScrollRightMotion>
         </div>
         <Lottie
-          // options={{
-          //   loop: true,
-          //   autoplay: true,
-          //   animationData: lottie,
-          //   rendererSettings: {
-          //     preserveAspectRatio: "xMidYMid slice",
-          //   },
-          // }}
-          // isClickToPauseDisabled
-          // height={width > 768 ? 400 : 300}
-          // width={width > 768 ? 400 : 300}
           loop
           animationData={lottie}
           play

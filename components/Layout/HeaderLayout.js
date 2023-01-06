@@ -6,13 +6,10 @@ const HeaderLayout = ({ text }) => {
     <motion.div
       initial={{ y: 40, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      // animate={{ y: -40, opacity: 1 }}
       transition={{ ease: 'easeOut', duration: 0.8 }}
-      // exit={{ y: 20, opacity: 0 }}
     >
       <div className="md:max-w-xl max-w-xs sm:max-w-lg transition-all ease-in-out mx-auto space-y-6">
         <div
-          // data-aos="zoom-in"
           className="flex flex-row flex-nowrap items-center my-8"
         >
           <span
@@ -21,7 +18,6 @@ const HeaderLayout = ({ text }) => {
             role="presentation"
           ></span>
           <span
-            // data-aos="zoom-in"
             className="flex-none block mx-4 border-2 border-dotted dark:border-primary-light border-primary-dark rounded-md text-xl md:text-4xl px-8 py-3 font-family-montserrat"
           >
             {text}

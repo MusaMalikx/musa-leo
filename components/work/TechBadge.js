@@ -1,7 +1,25 @@
 import React from "react";
-import { SiFirebase, SiNextdotjs, SiReact, SiRedux, SiTailwindcss } from "react-icons/si";
+import {
+  SiChakraui,
+  SiFirebase,
+  SiFramer,
+  SiNestjs,
+  SiNextdotjs,
+  SiReact,
+  SiRedux,
+  SiTailwindcss,
+} from "react-icons/si";
 
-const TechBadge = ({ tailwind, redux, firebase, react, next }) => {
+const TechBadge = ({
+  tailwind,
+  redux,
+  firebase,
+  react,
+  next,
+  nest,
+  chakra,
+  framer,
+}) => {
   return (
     <>
       {tailwind && (
@@ -51,6 +69,36 @@ const TechBadge = ({ tailwind, redux, firebase, react, next }) => {
           </div>
           <div className="text-xs sm:text-sm px-2 py-0.5 text-gray-200 rounded-r bg-gray-800 font-bold font-family-poppins">
             Next Js
+          </div>
+        </div>
+      )}
+      {nest && (
+        <div className="flex items-center">
+          <div className="px-2 py-1 bg-gray-200 text-nest rounded-l text-xs sm:text-base">
+            <SiNestjs />
+          </div>
+          <div className="text-xs sm:text-sm px-2 py-0.5 text-gray-200 rounded-r bg-nest font-bold font-family-poppins">
+            Nest Js
+          </div>
+        </div>
+      )}
+      {chakra && (
+        <div className="flex items-center">
+          <div className="px-2 py-1 bg-gray-700 text-chakra rounded-l text-xs sm:text-base">
+            <SiChakraui />
+          </div>
+          <div className="text-xs sm:text-sm px-2 py-0.5 text-gray-700 rounded-r bg-chakra font-bold font-family-poppins">
+            Chakra UI
+          </div>
+        </div>
+      )}
+      {framer && (
+        <div className="flex items-center">
+          <div className="px-2 py-1 bg-gray-300 text-black rounded-l text-xs sm:text-base">
+            <SiFramer />
+          </div>
+          <div className="text-xs sm:text-sm px-2 py-0.5 text-gray-200 rounded-r bg-gray-800 font-bold font-family-poppins">
+            Framer Motion
           </div>
         </div>
       )}

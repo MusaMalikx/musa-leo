@@ -1,4 +1,3 @@
-// import Lottie from "react-lottie";
 import lottie1 from "../../assets/animations/63487-programming-computer.json";
 import lottie4 from "../../assets/animations/53345-red-circle.json";
 import { motion } from "framer-motion";
@@ -51,17 +50,6 @@ const Banner = () => {
           <div className="flex flex-col text-nowwrap">
             <div className="overflow-hidden flex w-full items-center justify-center">
               <Lottie
-                // options={{
-                //   loop: true,
-                //   autoplay: true,
-                //   animationData: lottie1,
-                //   rendererSettings: {
-                //     preserveAspectRatio: "xMidYMid slice",
-                //   },
-                // }}
-                // isClickToPauseDisabled
-                // height={width > 768 ? 500 : 400}
-                // width={width > 768 ? 500 : 400}
                 loop
                 animationData={lottie1}
                 play={width > 768 ? true : false}
