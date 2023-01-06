@@ -7,7 +7,7 @@ import Layout from "../components/Layout/Layout";
 
 const Home = () => {
   return (
-    <Layout bool={true} title="Homepage">
+    <Layout bool={true}>
       <div className="min-h-screen font-family-montserrat">
         <Banner />
         <main className="container mx-auto py-7">

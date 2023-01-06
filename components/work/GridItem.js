@@ -32,7 +32,7 @@ const GridItem = ({ data }) => {
           <p className="font-bold text-2xl md:text-4xl">{data.title}</p>
           <p className="text-sm md:text-base">
             Description Vivamus dui dui, imperdiet non facilisis eget, commodo a
-            enim. Nulla viverra sem dui.
+            enim. Nulla viverra sem dui ...
           </p>
           <motion.div
             whileTap={{ scale: 0.8 }}

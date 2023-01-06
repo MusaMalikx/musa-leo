@@ -6,7 +6,7 @@ import Grid from "../../components/work/Grid";
 const Work = () => {
   const router = useRouter();
   return (
-    <Layout title="Work">
+    <Layout>
       <div className="container px-10 mx-auto py-7">
         <div className="flex ml-8 mb-10" onClick={() => router.push("/")}>
           <span>
